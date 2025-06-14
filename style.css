@@ -143,7 +143,7 @@ footer {
 .header-banner {
   width: 100%;               /* changed from 100vw */
   height: 400px;             /* adjust height as needed */
-  background-image: url('Webpics/CosmicCliffs.png');
+  background-image: url('CosmicCliffs.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
