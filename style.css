@@ -1,6 +1,186 @@
+/* Body and base styles */
+body {
+  background-color: hsl(0,0%,100%);
+  color: hsl(0,0%,0%);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;               /* REMOVE padding here */
+  /* We'll move padding to .content-wrapper */
+}
+
+/* Wrapper for all content except the banner */
+.content-wrapper {
+  padding: 40px 20px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 0.3em;
+  color: hsl(0,0%,100%);
+}
+
+body > p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2.5em;
+  background: linear-gradient(to bottom, #1b0036, #000000);
+  color: #f5f5f5;
+  font-family: 'Rajdhani', sans-serif;
+  text-shadow: 0 0 10px #b188f4;
+}
+
+/* Project layout */
+.project {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 50px;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 30px;
+}
+
+/* Image standardization */
 img.hero {
-  width: 25em;
+  width: 300px;
   height: auto;
-  border-radius: 8px;
-  margin-bottom: 30px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+img.hero:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Text styling */
+.project p {
+  margin: 0;
+  flex: 1;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 60px;
+  background-color: hsl(240, 87%, 90%);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project p {
+    text-align: left;
+  }
+
+  img.hero {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* Overlay and image zoom */
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  transform: scale(1);
+}
+
+.image-overlay.active {
+  display: flex;
+}
+
+.image-overlay img:active {
+  transform: scale(0.98);
+  transition: none;
+}
+
+.image-overlay-close {
+  position: absolute;
+  top: 24px;
+  right: 36px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Banner styling */
+.header-banner {
+  width: 100%;               /* changed from 100vw */
+  height: 400px;             /* adjust height as needed */
+  background-image: url('Webpics/CosmicCliffs.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;             /* center text horizontally and vertically */
+  flex-direction: column;   /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.header-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  z-index: 0;
+}
+
+.header-banner h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 0 0 10px #b188f4;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.5em;
+  font-family: 'Rajdhani', sans-serif;
+  text-shadow: 0 0 8px #b188f4;
+  color: #f5f5f5;
 }
