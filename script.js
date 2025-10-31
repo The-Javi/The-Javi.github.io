@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       overlayImg.src = img.src;
       overlayImg.alt = img.alt;
 
-      // reset transform
       overlayImg.style.transform = "translate(0px, 0px) scale(1)";
       imgX = 0; imgY = 0;
     });
