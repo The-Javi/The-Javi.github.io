@@ -147,3 +147,61 @@ footer {
   cursor: pointer;
   font-weight: bold;
 }
+
+/* Project Page Styles */
+.header-banner.small {
+  height: 180px;
+  background-color: #1b0036;
+  text-align: center;
+}
+
+.project-page article {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.project-page h2 {
+  margin-top: 1.8em;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.project-image {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.project-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.project-image figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Back Button */
+.back-btn {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.back-btn a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #1b0036;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.back-btn a:hover {
+  background-color: #3d1a72;
+}
