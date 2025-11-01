@@ -20,93 +20,96 @@
 <main class="content-wrapper project-page">
   <article>
     <h2>Overview</h2>
-    <p>
-      As part of the Composites subsystem, we are pushing to convert to the era of carbon fiber. Are we riding a wave? A fad? A glorifieded material? Maybe.
-      But this introduces so many material concepts that it's great to experiment with. I was put in charge of producing a replacement to our aluminum pushrods
-      currently on the car's suspension. Just a little something to catch you up, the suspension system on racing vehicles transmit forces from the tire to the
-      shocks through these rods. These race cars will either use push/pull rods (same concept just a different configuration).
-    </p>
+<p>
+  As part of the Composites subsystem, we are pushing to convert to the era of carbon fiber. Are we riding a wave? A fad? A glorified material? Maybe.
+  But this introduces so many material concepts that it's great to experiment with. I was put in charge of producing a replacement for our aluminum pushrods
+  currently on the car's suspension. Just a little something to catch you up—the suspension system on racing vehicles transmits forces from the tire to the
+  shocks through these rods. These race cars will either use push/pull rods (same concept, just a different configuration).
+</p>
 
-     <!-- Insert image of F1 pushrod -->
-    <figure class="project-image">
-      <img src="Webpics/ExampleImage.png" alt="Example captioned image">
-      <figcaption>Caption: Description of what the image shows.</figcaption>
-    </figure>
+<figure class="project-image">
+  <img src="PushRodF1.jpg" alt="Pushrod on F1 Car">
+  <figcaption>Pushrod and Pullrod on an F1 Car</figcaption>
+</figure>
 
-    <h2>Design Considerations</h2>
-    <p> 
-      Now many things have to be considered to replace a conventioanal metal part with carbon fiber.
-      <ol>
-      <li> You can't just thread a rod and stick a bolt in it.</li>
-      <li> Compressive Strength</li>
-      <li> Tensile Strength</li>
-      <li> Insert Design</li>
-      <li> Adhesion and Cohesion</li>
-      </ol>
-    </p>
+<h2>Design Considerations</h2>
+<p>
+  Many factors must be considered when replacing a conventional metal part with carbon fiber:
+</p>
+<ol>
+  <li>You can't just thread a rod and stick a bolt in it.</li>
+  <li>Compressive Strength</li>
+  <li>Tensile Strength</li>
+  <li>Insert Design</li>
+  <li>Adhesion and Cohesion</li>
+</ol>
 
-    <h2>Research Proces</h2>
-    <p>
-      The main advantage of carbon fiber is that it has amazing tensile strength compared to its weight. Weight reduction is achieved by layering multiple
-      plys of carbon fiber cloths and using a special epoxy-resin to fill the air pockets. This gives it an amazing strength-to-weight ratio. On the downside,
-      it is pretty weak in out-of-plane shear (a perpendicular force) and compression. So we've basically lost 2 degrees of freedom.<br>
-      To compensate for this, we need special ways to interface metal to composites, and to maximize tension and in-plane forces.<br>
-      Also, when running test, we expect something to fail, and I wanted things to fail in a specific order: <br>
-      (First) Cohesion, adhesion, pushrod, insert (Last)<br> <!-- talk about this later -->
-    </p>
+<h2>Research Process</h2>
+<p>
+  The main advantage of carbon fiber is that it has amazing tensile strength compared to its weight. Weight reduction is achieved by layering multiple
+  plies of carbon fiber cloths and using a special epoxy-resin to fill the air pockets. This gives it an excellent strength-to-weight ratio.
+  On the downside, it is relatively weak in out-of-plane shear (a perpendicular force) and compression—so we've basically lost two degrees of freedom.<br><br>
+  To compensate for this, we need special ways to interface metal to composites and to maximize tension and in-plane forces.<br><br>
+  When running tests, we expect something to fail, and I wanted things to fail in a specific order:<br>
+  <strong>(First)</strong> Cohesion → Adhesion → Pushrod → Insert <strong>(Last)</strong>
+</p>
 
-    <h3> How to interface metal and carbon fiber</h3>
-    <p> 
-      Without becoming a technical paper, I want to keep it breef. Some things are "stickier" than others like teflon compared to paper. Adhesives such as
-      tape and glue don't stick to teflon but are great on paper. Carbon fiber and aluminum are pretty close to teflon so special processes were taken to
-      increase the surface energy of these materials so that we could bond them with epoxy. The idea is to <em> insert</em> a small piece of metal at the ends of the
-      rod so that can be threaded and have bolt go through it. Now we solved how to put a carbon component to a metal frame.
-    </p>
+<h3>How to Interface Metal and Carbon Fiber</h3>
+<p>
+  Without becoming a technical paper, I’ll keep it brief. Some things are "stickier" than others—like Teflon compared to paper. Adhesives such as
+  tape and glue don't stick to Teflon but are great on paper. Carbon fiber and aluminum are closer to Teflon, so special processes were taken to
+  increase the surface energy of these materials so we could bond them with epoxy.<br><br>
+  The idea is to <em>insert</em> a small piece of metal at the ends of the rod so it can be threaded and allow a bolt to go through it.
+  Now we’ve solved how to connect a carbon component to a metal frame.
+</p>
 
-    <h3> Tensile Strength</h3>
-    <p>
-      In order to gauge the strength of the pushrod in tension, we ran a few tests. We first ran an FEA using the ACP tool in ANSYS Mechanical
-      to get an estimate of what to expect. This is cheap and fast, however, composites are famously anisotropic and hard to characterize. 
-      ANSYS can give you a <em>decent</em> prediction, but that won't suffice to persuade a team to integrate this idea.<br> Furthermore, adhesive bonds
-      like epoxy are a whole science on their own by the physics of friction and whatnot. Even now, it's hard to describe friction, especially on a simulation
-      software. <br>
-      The next logical step is to run real-world validations. With the use of an Instron machine, we can see the failure points of our pushrod. Whether that be
-      the adhesive bond, the cohesion of the epoxy, the pushrod snapping, or the insert galling. Each case would tell us something different and how to
-      improve the design.
-    </p>
-    
-    <h3> Compressive Strength </h3>
-    <p>
-      Like I said earlier, fiber laminates like carbon fiber are pretty bad in compression. But they will still hold up to some degree. In order to gauge
-      how screwed we are, we ran several tests on a hyrdraulic press to see when it would fail. We expected to see the pushrod snap, buckle, or split like a log.
-      This test is by far the most important as our <strong>push</strong>rod will be seeing a lot of compression. 
-    </p>
+<h3>Tensile Strength</h3>
+<p>
+  To gauge the strength of the pushrod in tension, we ran several tests. We first performed an FEA using the ACP tool in ANSYS Mechanical
+  to get an estimate of what to expect. This method is cheap and fast; however, composites are famously anisotropic and hard to characterize.
+  ANSYS can give you a <em>decent</em> prediction, but that alone won’t persuade a team to integrate this idea.<br><br>
+  Furthermore, adhesive bonds like epoxy are a whole science on their own due to the physics of friction and surface interaction.
+  Even now, it’s hard to describe friction—especially in simulation software.<br><br>
+  The next logical step was real-world validation. Using an Instron machine, we observed the failure points of our pushrod—
+  whether that be the adhesive bond, cohesion of the epoxy, the pushrod snapping, or the insert galling.
+  Each case tells us something different and helps improve the design.
+</p>
 
-    <h3> Insert Design </h3>
-    <p>
-      The design of the insert is also very important since it will be transmitting all the load through the bolt to the suspension. The basic idea of the insert
-      is to act as a sleeve that goes inside the pushrod. The longer the sleeve is, the stronger the bond strength is by the epoxy. However, make it too long and 
-      congratulations you have an aluminum pushrod. To optimize this, I calculated the length needed to sustain an arbitrary load given the lap shear 
-      strength from the epoxy's data sheet and the inner diamater of the pushrod.<br>
-      A method was also needed to inject epoxy in the gap without runoff or voids. My first idea was to just rub epoxy on the surface of the insert then
-      stick it into the pushrod. We saw some other concepts where people drilled 2 small holes opposite of each other in the pushrod. However, I believe this
-      greatly compromises the strength of the rod as the fibers are no longer continous. My method was to include two small holes through the top of the insert
-      small channels to allow the epoxy to flow through. <br>
-      There are other important factors like the flange thickness, material type, and the introduciton of a spacer at the bottom of the insert to try to prevent
-      epoxy runoff and create concentricity. 
-    </p>
+<h3>Compressive Strength</h3>
+<p>
+  Like I mentioned earlier, fiber laminates such as carbon fiber perform poorly in compression, but they still hold up to some degree.
+  To gauge how much, we ran several tests on a hydraulic press to observe when failure would occur. We expected to see the pushrod snap,
+  buckle, or split like a log. This test is by far the most important since our <strong>push</strong>rod will experience significant compression.
+</p>
 
-    <h3>Adhesion and Cohesion</h3>
-    <p>
-      Last but not least, the bond between the carbon fiber surface and aluminum insert is one of the most critical parts. Ideally, we would see cohesive failure
-      in the epoxy which is just a split midplane of the volume. This would mean we've optimized everything in our control to maximize the strength of the pushrod.
-      The use of silica beads were an idea to implement to create an even good bond gap (concentric) and increase the shear strength of the epoxy. This was read about
-      in research papers but a certain ratio has to be achieved otherwise it will weaken the cohesion. Finding this ration was also considered in this research.<br>
-      Adhesion, like mentioned earlier, has to be achieved through special processes like physical abrasion to create more surface area or chemical abrasion to 
-      increase the surface energy. Adhesion is something more authority over than cohesion, so we must do everything we can to maximize that bond.
-    </p>
+<h3>Insert Design</h3>
+<p>
+  The design of the insert is also critical since it transmits all the load through the bolt to the suspension. The basic idea is to act as a
+  sleeve that fits inside the pushrod. The longer the sleeve, the stronger the bond strength due to increased epoxy contact.
+  However, make it too long and—congratulations—you’ve made an aluminum pushrod.<br><br>
+  To optimize this, I calculated the length needed to sustain an arbitrary load using the lap shear strength from the epoxy's datasheet and
+  the inner diameter of the pushrod.<br><br>
+  We also needed a method to inject epoxy into the gap without runoff or voids. My first idea was to simply coat the insert with epoxy
+  and then insert it into the pushrod. Others drilled two small holes opposite each other in the pushrod, but that compromises strength
+  since the fibers are no longer continuous.<br><br>
+  My solution was to include two small holes through the top of the insert, forming channels to allow epoxy flow. Other important
+  factors included flange thickness, material type, and the addition of a spacer at the bottom of the insert to prevent epoxy runoff
+  and maintain concentricity.
+</p>
 
-    <p> Alright yap session over, you can ask me personally for more details.</p>
+<h3>Adhesion and Cohesion</h3>
+<p>
+  Last but not least, the bond between the carbon fiber surface and aluminum insert is one of the most critical aspects. Ideally, we would see
+  cohesive failure in the epoxy—a split along the midplane of the volume. This indicates that everything within our control has been optimized
+  to maximize the strength of the pushrod.<br><br>
+  The use of silica beads was another idea to create an even bond gap (for concentricity) and increase shear strength. However, this must be done
+  in the correct ratio, or it could weaken the cohesion. Finding that ratio was part of this research.<br><br>
+  Adhesion, as mentioned earlier, can be improved through physical abrasion (to increase surface area) or chemical treatment (to raise surface energy).
+  Adhesion is something we have more control over than cohesion, so we must do everything possible to maximize that bond.
+</p>
+
+<p><strong>Alright, yap session over — you can ask me personally for more details.</strong></p>
+
     
     <!-- Example Image Block -->
     <figure class="project-image">
