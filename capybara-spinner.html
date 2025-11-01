@@ -11,7 +11,7 @@
 
 <!-- Header -->
 <header class="header-banner small">
-  <h1>Project Title</h1>
+  <h1>Capybara Fidget Spinner</h1>
   <p class="subtitle">by Javier Sosa</p>
 </header>
 
@@ -20,13 +20,21 @@
   <article>
     <h2>Overview</h2>
     <p>
-      Write a summary of your project here — the motivation, objectives, and what you learned. 
-      This is a great place to describe your design process and challenges.
+      I had a class to learn SolidWorks, and the goal for the semester was create a working fidget spinner. 
+      I could have been done in a week, but I wanted to something non-traditional and funny. From this experience, 
+      I learned of the importance of tolerance testing your material and precision testing your instrumenets, make a history
+      of changes, and how to make a 'good' spinner that is rotationally balanced.
     </p>
 
     <h2>Design & Process</h2>
     <p>
-      Add more details here. You can insert images, captions, or diagrams to explain your work.
+      It started with an .stl model I pulled from the internet. From there I was able to splice it in Solidworks, and make necessary changes.
+      I had a clear goal for how I wanted it to function:
+      - Spin Longer than 5 seconds
+      - Have 2 pieces that snap together and remain flushed using magnets
+      - Fit a ball-bearing that would remain invisible
+      - Have great detail and smoothness to the 3D printed model
+      - Use PETG due to strength and compliance
     </p>
 
     <!-- Example Image Block -->
@@ -37,7 +45,14 @@
 
     <h2>Results & Reflection</h2>
     <p>
-      Summarize key outcomes or insights. Mention tools or software you used (e.g., SolidWorks, MATLAB, etc.).
+      Overall, I iterated through about 4 versions and 5 prints. Changes included resizing the caps so they remain concentric with the hole in the body,
+      resizing hole diameters in the body to be 0.15 mm larger than magnets and ball bearing to achieve a TIGHT fit, and figuring out that the splicing software
+      and specific printer I was using had a bias of about +0.2 mm. Because of this case, I had to adjust holes to compensate for that bias and use tolerancing to 
+      get a reasonable fit. 
+      The magnets were simple cylindrical, neodymium magnets from Amazon. The ball bearing was upgraded from a cheap capped stainless steel ball-bearing, 
+      to a hybrid ceramic-steel ball bearing. This greatly reduced friction and helped it spin 30 seconds longer. I also did not use any oils or lubricant as it showed
+      produce more friction. It is not important in this case anyways as it is not nearly fast enough or producing enough load to cause physical wear or heat.
+      I used SolidWorks to edit the model, Bambu Studio to splice it, and the Bambu Lab P1P to print the model.
     </p>
   </article>
 
