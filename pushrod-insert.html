@@ -56,7 +56,7 @@
 
 <h3>How to Interface Metal and Carbon Fiber</h3>
 <p>
-  Without becoming a technical paper, I’ll keep it brief. Some things are "stickier" than others—like Teflon compared to paper. Adhesives such as
+  Without becoming a technical paper, I’ll keep it brief. Some things are "stickier" than others, like Teflon compared to paper. Adhesives such as
   tape and glue don't stick to Teflon but are great on paper. Carbon fiber and aluminum are closer to Teflon, so special processes were taken to
   increase the surface energy of these materials so we could bond them with epoxy.<br><br>
   The idea is to <em>insert</em> a small piece of metal at the ends of the rod so it can be threaded and allow a bolt to go through it.
@@ -70,7 +70,7 @@
   ANSYS can give you a <em>decent</em> prediction, but that alone won’t persuade a team to integrate this idea.<br><br>
   Furthermore, adhesive bonds like epoxy are a whole science on their own due to the physics of friction and surface interaction.
   Even now, it’s hard to describe friction—especially in simulation software.<br><br>
-  The next logical step was real-world validation. Using an Instron machine, we observed the failure points of our pushrod—
+  The next logical step was real-world validation. Using an Instron machine, we observed the failure points of our pushrod;
   whether that be the adhesive bond, cohesion of the epoxy, the pushrod snapping, or the insert galling.
   Each case tells us something different and helps improve the design.
 </p>
@@ -78,7 +78,7 @@
 <h3>Compressive Strength</h3>
 <p>
   Like I mentioned earlier, fiber laminates such as carbon fiber perform poorly in compression, but they still hold up to some degree.
-  To gauge how much, we ran several tests on a hydraulic press to observe when failure would occur. We expected to see the pushrod snap,
+  To gauge how screwed we would be if it failed, we ran several tests on a hydraulic press to observe when failure would occur. We expected to see the pushrod snap,
   buckle, or split like a log. This test is by far the most important since our <strong>push</strong>rod will experience significant compression.
 </p>
 
@@ -90,7 +90,7 @@
   To optimize this, I calculated the length needed to sustain an arbitrary load using the lap shear strength from the epoxy's datasheet and
   the inner diameter of the pushrod.<br><br>
   We also needed a method to inject epoxy into the gap without runoff or voids. My first idea was to simply coat the insert with epoxy
-  and then insert it into the pushrod. Others drilled two small holes opposite each other in the pushrod, but that compromises strength
+  and then slip it into the pushrod. Other teams have drilled two small holes opposite each other in the pushrod, but that compromises strength
   since the fibers are no longer continuous.<br><br>
   My solution was to include two small holes through the top of the insert, forming channels to allow epoxy flow. Other important
   factors included flange thickness, material type, and the addition of a spacer at the bottom of the insert to prevent epoxy runoff
@@ -100,10 +100,10 @@
 <h3>Adhesion and Cohesion</h3>
 <p>
   Last but not least, the bond between the carbon fiber surface and aluminum insert is one of the most critical aspects. Ideally, we would see
-  cohesive failure in the epoxy—a split along the midplane of the volume. This indicates that everything within our control has been optimized
+  cohesive failure in the epoxy; A split along the midplane of the bond. This indicates that everything within our control has been optimized
   to maximize the strength of the pushrod.<br><br>
   The use of silica beads was another idea to create an even bond gap (for concentricity) and increase shear strength. However, this must be done
-  in the correct ratio, or it could weaken the cohesion. Finding that ratio was part of this research.<br><br>
+  in the correct ratio, or it could weaken the cohesion. Finding that ratio was also part of this research.<br><br>
   Adhesion, as mentioned earlier, can be improved through physical abrasion (to increase surface area) or chemical treatment (to raise surface energy).
   Adhesion is something we have more control over than cohesion, so we must do everything possible to maximize that bond.
 </p>
