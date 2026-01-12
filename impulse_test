@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Impulse Test | Javier Sosa</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="Webpics/Logo.png" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header-banner small">
+  <h1>Impulse Testing</h1>
+  <p class="subtitle">by Javier Sosa</p>
+</header>
+  
+<!-- Main Content -->
+<main class="content-wrapper project-page">
+  
+  <article>
+    <h2>Overview</h2>
+    <p>
+      This was my final project for Electromechanical systems. My team designed and tested a method to gauge the effectivness of
+      energy dissipation. In this lab, we investigated the force attenuation performance of three footwear types — Converse shoes, 
+      walking sneakers, and basketball shoes — using controlled drop tests on a custom-calibrated force plate. By analyzing force–time
+      responses and impulse across multiple impact energies, we aimed to determine how shoe design influences peak loading and energy 
+      dissipation, and which configurations are most effective at reducing injury-relevant forces.
+    </p>
+
+    <h2>Design & Process</h2>
+    <p>
+      Our final project gaves us the freedom to choose something to research using software and sensors we've used in class. We chose to
+      utilize strain gauges as they are widely used in structural analysis. \n
+      Four gauges were arranged in a wheatestone bridge configuration to maximize the sensitivity of the sensors. \n
+      An aluminum plate was used for its ease of machining and rigidity for the scope of tests we performed.
+      
+    </p>
+
+    <figure class="project-image">
+      <img src="light_mcqueen1.jpg" alt="3D Model">
+      <figcaption>Lightning McQueen model </figcaption>
+    </figure>
+
+    <figure class="project-image">
+      <img src="light_mcqueen2.jpg" alt="Vortex Generator Tab">
+      <figcaption>A single vortex generator - penny for reference</figcaption>
+    </figure>
+
+    <figure class="project-image">
+      <img src="light_mcqueen3.jpg" alt="Table of Results">
+      <figcaption>Aerodynamic drag results</figcaption>
+    </figure>
+
+    <h2>Results & Reflection</h2>
+    <p>
+      Overall, the results demonstrate that carefully placed vortex generators can meaningfully
+      reduce drag by delaying flow separation under certain conditions. However, their effectiveness is
+      strongly dependent on Reynolds number, local flow conditions, and vehicle-specific geometries
+    </p>
+  </article>
+
+  <h3>Full Technical Report</h3>
+  <p class="center">
+    <a href="light_mcqueen_report.pdf" download>
+      Download PDF
+    </a>
+  </p>
+
+  <!-- Back Button -->
+  <div class="back-btn">
+    <a href="index.html">&larr; Back to Projects</a>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  2025 Javier Sosa • Javisosa2005@icloud.com
+</footer>
+
+</body>
+</html>
