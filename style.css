@@ -217,11 +217,13 @@ footer {
 }
 
 .project-image img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 250px;      /* pick any height you want */
+  object-fit: cover;  /* preserves aspect ratio but crops edges */
   border-radius: 10px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
+
 
 .project-image figcaption {
   font-size: 0.9rem;
@@ -258,3 +260,4 @@ footer {
 .back-btn a:hover {
   background-color: #3d1a72;
 }
+
