@@ -217,7 +217,7 @@ footer {
 }
 
 .project-image img {
-  width: 700px;
+  width: 800px;
   height: 500px;      /* pick any height you want */
   object-fit: cover;  /* preserves aspect ratio */
   border-radius: 10px;
@@ -260,6 +260,7 @@ footer {
 .back-btn a:hover {
   background-color: #3d1a72;
 }
+
 
 
 
