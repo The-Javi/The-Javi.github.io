@@ -12,147 +12,121 @@
 <!-- Header -->
 <header class="header-banner small">
   <h1>Carbon Fiber Pushrod</h1>
-  <h2> <em>Research and Development - Composites Team</em></h2>
+  <h2><em>Research and Development - Composites Team</em></h2>
   <p class="subtitle">by Javier Sosa</p>
 </header>
 
 <!-- Main Content -->
 <main class="content-wrapper project-page">
   <article>
+
     <h2>Overview</h2>
-<p>
-  As part of the Composites subsystem, we are pushing to convert to the era of carbon fiber. Are we riding a wave? A fad? A glorified material? Maybe.
-  But this introduces so many material concepts that it's great to experiment with. I was put in charge of producing a replacement for our aluminum pushrods
-  currently on the car's suspension. Just a little something to catch you up—the suspension system on racing vehicles transmits forces from the tire to the
-  shocks through these rods. These race cars will either use push/pull rods (same concept, just a different configuration).
-</p>
-
-<figure class="project-image">
-  <img src="PushRodF1.jpg" alt="Pushrod on F1 Car">
-  <figcaption>Pushrod and Pullrod on an F1 Car</figcaption>
-</figure>
-
-<h2>Design Considerations</h2>
-<p>
-  Many factors must be considered when replacing a conventional metal part with carbon fiber:
-</p>
-<ol>
-  <li>You can't just thread a rod and stick a bolt in it.</li>
-  <li>Compressive Strength</li>
-  <li>Tensile Strength</li>
-  <li>Insert Design</li>
-  <li>Adhesion and Cohesion</li>
-</ol>
-
-<h2>Research Process</h2>
-<p>
-  The main advantage of carbon fiber is that it has amazing tensile strength compared to its weight. Weight reduction is achieved by layering multiple
-  plies of carbon fiber cloths and using a special epoxy-resin to fill the air pockets. This gives it an excellent strength-to-weight ratio.
-  On the downside, it is relatively weak in out-of-plane shear (a perpendicular force) and compression—so we've basically lost two degrees of freedom.<br><br>
-  To compensate for this, we need special ways to interface metal to composites and to maximize tension and in-plane forces.<br><br>
-  When running tests, we expect something to fail, and I wanted things to fail in a specific order:<br>
-  <strong>(First)</strong> Cohesion → Adhesion → Pushrod → Insert <strong>(Last)</strong>
-</p>
-
-<h3>How to Interface Metal and Carbon Fiber</h3>
-<p>
-  Without becoming a technical paper, I’ll keep it brief. Some things are "stickier" than others, like Teflon compared to paper. Adhesives such as
-  tape and glue don't stick to Teflon but are great on paper. Carbon fiber and aluminum are closer to Teflon, so special processes were taken to
-  increase the surface energy of these materials so we could bond them with epoxy.<br><br>
-  The idea is to <em>insert</em> a small piece of metal at the ends of the rod so it can be threaded and allow a bolt to go through it.
-  Now we’ve solved how to connect a carbon component to a metal frame.
-</p>
-
-<h3>Tensile Strength</h3>
-<p>
-  To gauge the strength of the pushrod in tension, we ran several tests. We first performed an FEA using the ACP tool in ANSYS Mechanical
-  to get an estimate of what to expect. This method is cheap and fast; however, composites are famously anisotropic and hard to characterize.
-  ANSYS can give you a <em>decent</em> prediction, but that alone won’t persuade a team to integrate this idea.<br><br>
-  Furthermore, adhesive bonds like epoxy are a whole science on their own due to the physics of friction and surface interaction.
-  Even now, it’s hard to describe friction—especially in simulation software.<br><br>
-  The next logical step was real-world validation. Using an Instron machine, we observed the failure points of our pushrod;
-  whether that be the adhesive bond, cohesion of the epoxy, the pushrod snapping, or the insert galling.
-  Each case tells us something different and helps improve the design.
-</p>
-
-<h3>Compressive Strength</h3>
-<p>
-  Like I mentioned earlier, fiber laminates such as carbon fiber perform poorly in compression, but they still hold up to some degree.
-  To gauge how screwed we would be if it failed, we ran several tests on a hydraulic press to observe when failure would occur. We expected to see the pushrod snap,
-  buckle, or split like a log. This test is by far the most important since our <strong>push</strong>rod will experience significant compression.
-</p>
-
-<h3>Insert Design</h3>
-<p>
-  The design of the insert is also critical since it transmits all the load through the bolt to the suspension. The basic idea is to act as a
-  sleeve that fits inside the pushrod. The longer the sleeve, the stronger the bond strength due to increased epoxy contact.
-  However, make it too long and—congratulations—you’ve made an aluminum pushrod.<br><br>
-  To optimize this, I calculated the length needed to sustain an arbitrary load using the lap shear strength from the epoxy's datasheet and
-  the inner diameter of the pushrod.<br><br>
-  We also needed a method to inject epoxy into the gap without runoff or voids. My first idea was to simply coat the insert with epoxy
-  and then slip it into the pushrod. Other teams have drilled two small holes opposite each other in the pushrod, but that compromises strength
-  since the fibers are no longer continuous.<br><br>
-  My solution was to include two small holes through the top of the insert, forming channels to allow epoxy flow. Other important
-  factors included flange thickness, material type, and the addition of a spacer at the bottom of the insert to prevent epoxy runoff
-  and maintain concentricity.
-</p>
-
-<h3>Adhesion and Cohesion</h3>
-<p>
-  Last but not least, the bond between the carbon fiber surface and aluminum insert is one of the most critical aspects. Ideally, we would see
-  cohesive failure in the epoxy; A split along the midplane of the bond. This indicates that everything within our control has been optimized
-  to maximize the strength of the pushrod.<br><br>
-  The use of silica beads was another idea to create an even bond gap (for concentricity) and increase shear strength. However, this must be done
-  in the correct ratio, or it could weaken the cohesion. Finding that ratio was also part of this research.<br><br>
-  Adhesion, as mentioned earlier, can be improved through physical abrasion (to increase surface area) or chemical treatment (to raise surface energy).
-  Adhesion is something we have more control over than cohesion, so we must do everything possible to maximize that bond.
-</p>
-
-<p><strong>Alright, yap session over — you can ask me personally for more details.</strong></p>
-
+    <p>
+      Designed and tested a carbon fiber replacement for aluminum suspension pushrods to reduce weight while maintaining structural performance.
+      Responsible for insert design, bonding strategy, and experimental validation.
+    </p>
 
     <figure class="project-image">
-      <img src="InsertAnnotated.png" alt="Annoted Model">
+      <img src="PushRodF1.jpg" alt="Pushrod on F1 Car">
+      <figcaption>Pushrod and Pullrod configuration in racing suspension systems</figcaption>
+    </figure>
+
+    <h2>Tools & Methods</h2>
+    <ul>
+      <li>CAD modeling and engineering drawings</li>
+      <li>FEA using ANSYS Mechanical (ACP)</li>
+      <li>Tensile testing (Instron machine)</li>
+      <li>Compression testing (hydraulic press)</li>
+      <li>Epoxy bonding and composite manufacturing</li>
+    </ul>
+
+    <h2>Engineering Challenges</h2>
+    <ul>
+      <li>Carbon fiber anisotropy (strong in tension, weak in compression/shear)</li>
+      <li>No direct threading → required bonded insert system</li>
+      <li>Reliable adhesion between aluminum and composite</li>
+      <li>Maintaining fiber continuity while enabling assembly</li>
+    </ul>
+
+    <h2>Design & Decisions</h2>
+
+    <h3>Bonded Insert System</h3>
+    <p>
+      Developed an internal aluminum sleeve to transfer load from the composite tube to a bolted joint without damaging fibers.
+    </p>
+
+    <h3>Insert Geometry Optimization</h3>
+    <p>
+      Sized insert length using epoxy lap shear data to maximize bond strength while minimizing added weight.
+    </p>
+
+    <h3>Epoxy Flow Strategy</h3>
+    <p>
+      Integrated internal channels within the insert to ensure full adhesive coverage without drilling into the carbon fiber tube.
+    </p>
+
+    <h3>Failure Strategy</h3>
+    <p>
+      Designed for controlled failure progression:
+      <br><strong>Cohesion → Adhesion → Composite → Insert</strong>
+    </p>
+
+    <h3>Surface Preparation</h3>
+    <p>
+      Investigated abrasion and chemical treatment methods to improve bond strength between aluminum and carbon fiber.
+    </p>
+
+    <figure class="project-image">
+      <img src="InsertAnnotated.png" alt="Annotated Insert Model">
       <figcaption>Insert Design Considerations</figcaption>
     </figure>
-    
+
     <figure class="project-image">
       <img src="InsertDrawing.png" alt="Engineering Drawing">
       <figcaption>Engineering Drawing of Insert</figcaption>
     </figure>
 
-     <figure class="project-image">
-      <img src="AnsysInsert.png" alt="Annoted Model">
-      <figcaption>Ansys Mechanical Simulation - 3kN Load Applied</figcaption>
-    </figure>
-
     <figure class="project-image">
-      <img src="PushrodCompress.jpg" alt="Pushrod after compression test">
-      <figcaption>Compression Test Results on Pushrod Assembly</figcaption>
+      <img src="AnsysInsert.png" alt="FEA Simulation">
+      <figcaption>ANSYS Simulation – 3kN Load</figcaption>
     </figure>
 
-     <figure class="project-image">
-      <img src="PushrodShear.jpg" alt="Pushrod after compression test alt angle">
-      <figcaption>Compression Test Results on Pushrod Assembly (Shear)</figcaption>
-    </figure>
+    <h2>Testing & Results</h2>
 
-    <figure class="project-image">
-      <img src="PushrodTensile.png" alt="Pushrod after tensile test">
-      <figcaption>Tensile Test on Pushrod Assembly</figcaption>
-    </figure>
-
-
-    
-    <h2>Results & Reflection</h2>
+    <h3>Tensile Testing</h3>
     <p>
-      Some things to note: Proper surface prep was not achieved which led to very low pullout strength in the first iteration of tests. Recall
-      earlier I said I wanted a chain of things to break to find the weakest link. From the first tensile test, the bond strength (adhesion) was the
-      weakest constraint. We reached about 5% of our theoretical max strength. A second tensile test was conducted later on using silica filler 
-      which improved the strength and we were able to achive 30% of our max. Once again however, the weakest link was the adhesive bond.<br><br>
-      In the compression test, our weakest link was the insert itself and the pushrod survived for the most part. The flange sheared off
-      which means it needs to be thicker or made of a stronger material. From the pic we could see that the pushrod sustainted some splitting at the very top
-      which means the hoop strength of the carbon fiber tube was next to fail.
+      Initial tests achieved ~5% of predicted strength due to poor adhesion. After improving bonding with silica filler, strength increased to ~30%.
+      Adhesive failure remained the limiting factor.
     </p>
+
+    <figure class="project-image">
+      <img src="PushrodTensile.png" alt="Tensile Test">
+      <figcaption>Tensile Test Setup</figcaption>
+    </figure>
+
+    <h3>Compression Testing</h3>
+    <p>
+      The insert flange failed before the composite tube, indicating insufficient insert strength. Local splitting in the tube suggested hoop stress limitations.
+    </p>
+
+    <figure class="project-image">
+      <img src="PushrodCompress.jpg" alt="Compression Test">
+      <figcaption>Compression Test Results</figcaption>
+    </figure>
+
+    <figure class="project-image">
+      <img src="PushrodShear.jpg" alt="Compression Shear">
+      <figcaption>Shear Failure Observed During Compression</figcaption>
+    </figure>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Adhesive bonding is the primary failure mode in composite-metal systems</li>
+      <li>Surface preparation significantly impacts performance</li>
+      <li>Insert geometry strongly influences load transfer and failure behavior</li>
+      <li>Composite members can outperform expectations, but joints govern reliability</li>
+    </ul>
+
   </article>
 
   <!-- Back Button -->
