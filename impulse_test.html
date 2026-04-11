@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Impulse Test | Javier Sosa</title>
+  <title>Impulse Testing | Javier Sosa</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="Webpics/Logo.png" />
 </head>
@@ -11,81 +11,106 @@
 
 <!-- Header -->
 <header class="header-banner small">
-  <h1>Impulse Testing</h1>
-  <p class="subtitle">by Javier Sosa</p>
+  <h1>Impact & Impulse Testing of Footwear</h1>
+  <p class="subtitle">Electromechanical Systems — Javier Sosa</p>
 </header>
   
 <!-- Main Content -->
 <main class="content-wrapper project-page">
   
   <article>
+
     <h2>Overview</h2>
     <p>
-      This was my final project for Electromechanical systems. My team designed and tested a method to gauge the effectivness of
-      energy dissipation. In this lab, we investigated the force attenuation performance of three footwear types — Converse shoes, 
-      walking sneakers, and basketball shoes — using controlled drop tests on a custom-calibrated force plate. By analyzing force–time
-      responses and impulse across multiple impact energies, we aimed to determine how shoe design influences peak loading and energy 
-      dissipation, and which configurations are most effective at reducing injury-relevant forces.
+      Designed and instrumented a force plate system to evaluate impact attenuation in footwear using controlled drop testing. 
+      Compared three shoe types (Converse, walking shoes, and basketball shoes) by analyzing force–time response and impulse 
+      under varying impact energies.
     </p>
 
-    <h2>Design & Process</h2>
+    <h2>Engineering Approach</h2>
+    <ul>
+      <li>Custom force plate using aluminum beam with bonded strain gauges</li>
+      <li>Full Wheatstone bridge configuration for maximum sensitivity</li>
+      <li>Data acquisition via NI-9218 at <strong>10 kHz sampling rate</strong></li>
+      <li>Drop tower testing across three energy levels: <strong>4.9 J, 7.48 J, 9.95 J</strong></li>
+      <li>Signal processing to extract peak force and impulse</li>
+    </ul>
+
+    <h2>System Design</h2>
     <p>
-      Our final project gaves us the freedom to choose something to research using software and sensors we've used in class. We chose to
-      utilize strain gauges as they are widely used in structural analysis.<br>
-      Four gauges were arranged in a wheatestone bridge configuration to maximize the sensitivity of the sensors. <br>
-      An aluminum plate was used for its ease of machining and rigidity for the scope of tests we performed.  
+      The force plate consisted of a 6" × 12" aluminum plate (0.125" thick) instrumented with four strain gauges 
+      arranged in a full Wheatstone bridge. Gauges were positioned symmetrically about the neutral axis to maximize 
+      sensitivity to bending strain during impact loading.
+    </p>
+
+    <p>
+      The system was calibrated using known masses (0–8.6 kg), producing a linear force–voltage relationship with 
+      <strong>R² ≈ 0.99</strong>, enabling accurate conversion of voltage signals into force measurements.
     </p>
 
     <figure class="project-image">
-      <img src="emechsetup.jpg" alt="3D Model">
-      <figcaption>Test Setup</figcaption>
+      <img src="emechsetup.jpg" alt="Test Setup">
+      <figcaption>Drop tower and instrumented force plate setup</figcaption>
     </figure>
+
+    <h2>Key Engineering Insights</h2>
+
+    <h3>Impact Attenuation</h3>
+    <p>
+      Footwear with increased cushioning significantly reduced peak force and impulse. Across all energy levels, 
+      Converse shoes consistently produced the highest loads, while basketball shoes demonstrated the best 
+      energy dissipation at high impact energies.
+    </p>
+
+    <h3>Quantitative Results</h3>
+    <p>
+      At the highest energy level (9.95 J):
+    </p>
+    <ul>
+      <li><strong>Converse:</strong> 10.98 Ns impulse</li>
+      <li><strong>Walking shoe:</strong> 9.16 Ns impulse</li>
+      <li><strong>Basketball shoe:</strong> 8.25 Ns impulse</li>
+    </ul>
+
+    <p>
+      This represents a <strong>~25% reduction in transmitted impulse</strong> between minimal and high-cushion designs.
+    </p>
 
     <figure class="project-image">
-      <img src="emechimpulse.png" alt="Vortex Generator Tab">
-      <figcaption>Graph Results - Impulse Response</figcaption>
+      <img src="emechimpulse.png" alt="Impulse Results">
+      <figcaption>Impulse comparison across footwear and energy levels</figcaption>
     </figure>
+
+    <h3>Transient Response</h3>
+    <p>
+      Time-domain analysis revealed distinct damping behavior:
+    </p>
+    <ul>
+      <li><strong>Converse:</strong> Large oscillations, poor damping</li>
+      <li><strong>Walking shoes:</strong> Moderate damping</li>
+      <li><strong>Basketball shoes:</strong> Rapid energy dissipation</li>
+    </ul>
 
     <figure class="project-image">
-      <img src="emechtransient.png" alt="Table of Results">
-      <figcaption>Graph Results - Transient Response</figcaption>
+      <img src="emechtransient.png" alt="Transient Response">
+      <figcaption>Force–time response showing damping characteristics</figcaption>
     </figure>
 
-    <h2>Results</h2>
+    <h3>Failure Observation</h3>
     <p>
-      The experimental results demonstrated a clear relationship between footwear design and impact attenuation.
-      Across all three drop energies, the Converse shoe consistently produced the highest peak forces and largest
-      impulse values, indicating minimal energy dissipation and a strong reliance on the underlying structure to
-      absorb impact. As the drop energy increased, this behavior became more pronounced, with larger force spikes
-      and longer-lasting oscillations observed in the force–time response.
+      At the highest energy test, insufficient energy absorption in the Converse configuration caused 
+      <strong>permanent deformation of the aluminum plate</strong>, demonstrating how poor damping transfers 
+      load to the underlying structure.
     </p>
-    
-    <p>
-      In contrast, both the walking sneakers and basketball shoes significantly reduced peak force and impulse
-      across all trials. At the highest drop energy, the basketball shoes exhibited the greatest damping performance,
-      aligning with their design intent for high-impact athletic use. Impulse measurements reinforced these findings,
-      showing that increased cushioning reduced the magnitude of transmitted loads. Transient response data further
-      highlighted these differences, as the more cushioned shoes dissipated energy quickly while the Converse shoe
-      caused the aluminum plate to oscillate, ultimately leading to permanent deformation during the highest-energy
-      test.
-    </p>
-    
-    <h2>Reflection</h2>
-    <p>
-      This project provided valuable insight into the practical challenges of experimental testing and sensor-based
-      measurement. Designing and calibrating a force plate using strain gauges required careful consideration of
-      sensor placement, bridge configuration, and data acquisition settings to accurately capture rapid transient
-      events. The calibration process and uncertainty propagation emphasized the importance of quantifying error
-      when translating voltage measurements into meaningful physical quantities.
-    </p>
-    
-    <p>
-      Beyond the technical results, this lab reinforced how engineering design decisions directly influence real-world
-      performance and safety. Observing permanent deformation of the force plate during testing highlighted the
-      consequences of insufficient energy dissipation and validated the importance of cushioning in injury
-      prevention. Overall, this project strengthened my understanding of experimental mechanics, data interpretation,
-      and the role of design intent in engineering solutions.
-    </p>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Force plate instrumentation enables high-resolution transient force measurement</li>
+      <li>Wheatstone bridge configuration significantly improves strain sensitivity</li>
+      <li>Impulse is a critical metric for evaluating injury risk</li>
+      <li>Material and geometric design directly influence energy dissipation</li>
+      <li>Poor damping can shift loads to structural components, causing failure</li>
+    </ul>
 
   </article>
 
@@ -104,7 +129,7 @@
 
 <!-- Footer -->
 <footer>
-  2025 Javier Sosa • Javisosa2005@icloud.com
+  © 2025 Javier Sosa • Javisosa2005@icloud.com
 </footer>
 
 </body>
