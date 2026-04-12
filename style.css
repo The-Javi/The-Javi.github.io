@@ -326,3 +326,92 @@ footer {
   color: white;
   cursor: pointer;
 }
+
+
+/* ===== HEADER ===== */
+.hero-nasa {
+  padding: 80px 20px 40px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.hero-nasa h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.hero-nasa .subtitle {
+  margin-top: 10px;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ===== PROJECT ROWS ===== */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.project-row {
+  display: flex;
+  gap: 25px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 25px;
+  transition: transform 0.2s ease;
+}
+
+.project-row:hover {
+  transform: translateX(5px);
+}
+
+/* Image */
+.project-row img {
+  width: 180px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Text */
+.project-text h2 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.project-text p {
+  margin: 4px 0;
+  color: #444;
+}
+
+/* Result highlight */
+.project-text .result {
+  font-weight: 500;
+  color: #000;
+}
+
+/* Tools */
+.project-text .tools {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project-row img {
+    width: 100%;
+  }
+}
