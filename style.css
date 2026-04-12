@@ -1,3 +1,90 @@
+
+/* ===== HERO ===== */
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0a0a0a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.hero .subtitle {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #aaa;
+  max-width: 600px;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+.card {
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.card img {
+  width: 100%;
+  height: auto; /* keeps natural aspect ratio */
+  display: block;
+}
+
+/* Content */
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
 /* ===== PROJECT CARDS (INDEX PAGE) ===== */
 .projects {
   display: flex;
