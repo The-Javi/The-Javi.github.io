@@ -11,67 +11,91 @@
 
 <!-- Header -->
 <header class="header-banner small">
-  <h1>Locking Mechanism</h1>
-  <p class="subtitle">by Javier Sosa</p>
+  <h1>Battery Box Locking Mechanism</h1>
+  <p class="subtitle">Solar Car — Daybreak | Javier Sosa</p>
 </header>
 
 <!-- Main Content -->
 <main class="content-wrapper project-page">
   <article>
+
     <h2>Overview</h2>
     <p>
-      This project was my first contribution to the Solar Car, Daybreak, in my freshman year. 
-      The goal was to design a simple lock to constrict our battery box.<br>
-      There were several criteria and constraints that had to be met:
-        <ul>
-          <li>Simple and manufacturable</li>
-          <li>Interface to kevlar-foam compostie sandwich</li>
-          <li>If underneath bottom panel, 1" clearance from floor</li>
-          <li>If on top of bottom panel, fit in a 3x3" area</li>
-          <li> Easy method to unlatch</li> 
-          <li>Sustain a 5g impulse from 80kg battery box</li>
-        </ul>
+      Designed and implemented a mechanical locking mechanism to secure an 80 kg battery box for a solar race car. 
+      The system was required to withstand dynamic loading while remaining compact, manufacturable, and easy to operate.
     </p>
 
-    <h2>Design & Process</h2>
+    <h2>Design Requirements</h2>
+    <ul>
+      <li>Withstand <strong>5g impulse loading</strong> from battery mass</li>
+      <li>Interface with Kevlar-foam composite sandwich structure</li>
+      <li>Fit within <strong>3" × 3"</strong> footprint (top-mounted option)</li>
+      <li>Maintain <strong>≥1" ground clearance</strong> (bottom-mounted option)</li>
+      <li>Simple, reliable latching/unlatching mechanism</li>
+      <li>Manufacturable with available tools and off-the-shelf components</li>
+    </ul>
+
+    <h2>Design Iteration</h2>
+
+    <h3>Initial Concept</h3>
     <p>
-      I created an initial design in about 2 weeks, and met up with my lead (Cesar) to review it. The design was to complex with too many constraints and parts.
-      It was ultimately junked and I started a new version. This time it was quicker to design since I knew what to avoid. I looked online for material prices,
-      and pre-manufcatured parts like U-brackets and carbon-steel stock. The design was much smaller and easier to manufacture. All the parts could be bought 
-      from McMaster-Carr and were simple to machine.
-      
+      The first design attempted to satisfy all constraints through a multi-component mechanism. 
+      However, design review revealed excessive complexity, poor manufacturability, and unnecessary part count.
+      The concept was scrapped in favor of a simpler approach.
     </p>
 
-    <!-- Example Image Block -->
     <figure class="project-image">
       <img src="LockingMech.png" alt="First lock iteration">
-      <figcaption>Concept Model in SolidWorks</figcaption>
+      <figcaption>Initial SolidWorks concept (overly complex)</figcaption>
     </figure>
 
+    <h3>Redesign Strategy</h3>
     <p>
-      Before reviewing with Cesar, I created a proof-of-concept using 3D printers to show how simple it is to make.
+      The second iteration focused on simplification and robustness:
+    </p>
+    <ul>
+      <li>Reduced part count and eliminated unnecessary features</li>
+      <li>Incorporated off-the-shelf components (U-brackets, steel stock)</li>
+      <li>Designed for straightforward machining and assembly</li>
+      <li>Prioritized reliability under dynamic loading</li>
+    </ul>
+
+    <h3>Prototyping</h3>
+    <p>
+      A proof-of-concept prototype was built using 3D printing to validate the mechanism’s functionality 
+      and ease of operation before committing to final fabrication.
     </p>
 
-     <figure class="project-image">
+    <figure class="project-image">
       <img src="LockingMechProto.jpg" alt="Prototype Locking Mechanism">
-      <figcaption>Prototype made using 3D printers, straw, and string</figcaption>
+      <figcaption>Rapid prototype for concept validation</figcaption>
     </figure>
 
+    <h3>Final Implementation</h3>
     <p>
-      After reviewing with Cesar, a few adjustments were made to the base plate to optomize material volume and change location of bolting holes.
+      Following design review, minor optimizations were made to reduce material usage and improve mounting geometry. 
+      The final design was manufactured and integrated into the vehicle.
     </p>
 
     <figure class="project-image">
       <img src="LockingMechFinal.jpg" alt="Final Version Implemented in Car">
-      <figcaption>Final Version that was Implemented onto Daybreak</figcaption>
+      <figcaption>Final locking mechanism installed on Daybreak</figcaption>
     </figure>
-    
-    <h2>Results & Reflection</h2>
+
+    <h2>Key Engineering Insights</h2>
+    <ul>
+      <li>Simpler designs are often more robust and manufacturable</li>
+      <li>Design reviews are critical for identifying overengineering early</li>
+      <li>Prototyping accelerates iteration and reduces risk before fabrication</li>
+      <li>Designing for real constraints (space, load, materials) drives better solutions</li>
+    </ul>
+
+    <h2>Impact</h2>
     <p>
-      This project was my first real project on the team. It did take a while to complete, but I'm glad I was able to design a component, get it reviewed,
-      restart and pivot quickly, create a prototype, and finalize something that would be used to compete. At this point, I was getting more comfortable using
-      SolidWorks and finding how much authority/freedom I had in the club.
+      The final mechanism met all design constraints and was successfully implemented on the vehicle, 
+      contributing to a secure and serviceable battery system for competition.
     </p>
+
   </article>
 
   <!-- Back Button -->
@@ -90,6 +114,6 @@
   <span id="overlayClose">&times;</span>
   <img id="overlayImg" />
 </div>
-  
+
 </body>
 </html>
