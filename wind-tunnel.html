@@ -4,124 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vortex Generators | Javier Sosa</title>
+  <link rel="icon" type="image/png" href="Logo.png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="Webpics/Logo.png" />
 </head>
 <body>
 
-<!-- Header -->
-<header class="header-banner small">
-  <h1>Vortex Generators & Boundary Layer Control</h1>
-  <p class="subtitle">Low-Speed Aerodynamics — Javier Sosa</p>
+<header class="page-header">
+  <p class="eyebrow"><a href="index.html">Javier Sosa</a></p>
+  <h1>Vortex Generators &amp; Boundary Layer Control</h1>
+  <p class="subtitle">Low-Speed Aerodynamics — Wind Tunnel Study</p>
 </header>
-  
-<!-- Main Content -->
-<main class="content-wrapper project-page">
-  
-  <article>
 
-    <h2>Overview</h2>
-    <p>
-      Investigated the effect of vortex generator (VG) placement on aerodynamic drag reduction for a bluff-body vehicle.
-      Conducted wind tunnel testing and flow visualization to identify optimal VG positioning for minimizing flow separation.
-    </p>
+<article>
 
-    <h2>Tools & Methods</h2>
-    <ul>
-      <li>Wind tunnel testing (open-circuit)</li>
-      <li>Flow visualization (smoke + surface tufts)</li>
-      <li>Drag force measurement (pistol grip sensor)</li>
-      <li>Data analysis: coefficient of drag (Cd) and power loss</li>
-      <li>Dimensional analysis using Reynolds number scaling</li>
-    </ul>
-
-    <h2>Experimental Setup</h2>
-    <p>
-      Tested a 1:12 scale stock car model across Reynolds numbers from 
-      <strong>1.6×10⁵ to 6.6×10⁵</strong>. 
-      Evaluated five configurations:
-    </p>
-    <ul>
-      <li>No vortex generators (baseline)</li>
-      <li>Front placement (~5% body length)</li>
-      <li>Mid placement (~50%)</li>
-      <li>Rear placement (~80%)</li>
-      <li>Optimized placement (~65%)</li>
-    </ul>
-
-    <figure class="project-image">
-      <img src="light_mcqueen1.jpg" alt="Car Model">
-      <figcaption>1:12 scale model used for testing</figcaption>
-    </figure>
-
-    <figure class="project-image">
-      <img src="light_mcqueen2.jpg" alt="Vortex Generator">
-      <figcaption>Triangular vortex generator geometry</figcaption>
-    </figure>
-
-    <h2>Key Engineering Insights</h2>
-
-    <h3>Flow Behavior</h3>
-    <p>
-      Vortex generators energize the boundary layer, delaying flow separation and reducing wake size.
-      Flow visualization showed that properly placed VGs maintained attachment further along the vehicle body.
-    </p>
-
-    <h3>Placement Sensitivity</h3>
-    <p>
-      VG effectiveness was highly dependent on placement:
-    </p>
-    <ul>
-      <li><strong>Front placement:</strong> Increased drag due to early turbulence and higher skin friction</li>
-      <li><strong>Mid placement:</strong> Minimal or inconsistent impact</li>
-      <li><strong>Rear-mid (~65%):</strong> Most effective — delayed separation and reduced wake</li>
-    </ul>
-
-    <h2>Results</h2>
-
-    <h3>Drag Reduction</h3>
-    <p>
-      The optimized VG placement reduced drag by approximately 
-      <strong>~3% compared to the baseline</strong> across tested Reynolds numbers.
-    </p>
-
-    <figure class="project-image">
-      <img src="light_mcqueen3.jpg" alt="Drag Results">
-      <figcaption>Coefficient of drag vs Reynolds number for different VG placements</figcaption>
-    </figure>
-
-    <h3>Power Impact</h3>
-    <p>
-      Although drag reduction was measurable, the corresponding decrease in power loss was minimal at this scale,
-      indicating limited real-world impact under low Reynolds number conditions.
-    </p>
-
-    <h2>Key Takeaways</h2>
-    <ul>
-      <li>Small geometric changes can significantly affect boundary layer behavior</li>
-      <li>VG placement is more critical than VG presence</li>
-      <li>Flow visualization is essential for interpreting aerodynamic performance</li>
-      <li>Scaling limitations (Re mismatch) can affect real-world applicability</li>
-    </ul>
-
-  </article>
-
-  <h3>Full Technical Report</h3>
-  <p class="center">
-    <a href="light_mcqueen_report.pdf" download>
-      Download PDF
-    </a>
+  <h2>Overview</h2>
+  <p>
+    Investigated how vortex generator (VG) placement affects drag on a bluff-body vehicle.
+    Wind tunnel testing and flow visualization were used to find the position that best delays
+    boundary-layer separation.
   </p>
 
-  <!-- Back Button -->
-  <div class="back-btn">
-    <a href="index.html">&larr; Back to Projects</a>
+  <div class="stats">
+    <div class="stat"><b>~3%</b><span>drag reduction, best placement</span></div>
+    <div class="stat"><b>5</b><span>configurations tested</span></div>
+    <div class="stat"><b>1.6–6.6 × 10⁵</b><span>Reynolds number range</span></div>
   </div>
-</main>
 
-<!-- Footer -->
+  <h2>Tools &amp; Methods</h2>
+  <ul>
+    <li>Open-circuit wind tunnel testing</li>
+    <li>Flow visualization with smoke and surface tufts</li>
+    <li>Drag force measurement with a pistol-grip sensor</li>
+    <li>Drag coefficient (C<sub>d</sub>) and power-loss analysis</li>
+    <li>Dimensional analysis using Reynolds number scaling</li>
+  </ul>
+
+  <h2>Experimental Setup</h2>
+  <p>
+    Tested a 1:12 scale stock car model across Reynolds numbers from
+    <strong>1.6 × 10⁵ to 6.6 × 10⁵</strong> in five configurations:
+  </p>
+  <ul>
+    <li>No vortex generators (baseline)</li>
+    <li>Front placement (~5% of body length)</li>
+    <li>Mid placement (~50%)</li>
+    <li>Rear placement (~80%)</li>
+    <li>Optimized placement (~65%)</li>
+  </ul>
+
+  <figure class="project-image">
+    <img src="light_mcqueen1.jpg" alt="1:12 scale car model in the wind tunnel">
+    <figcaption>1:12 scale model used for testing</figcaption>
+  </figure>
+
+  <figure class="project-image">
+    <img src="light_mcqueen2.jpg" alt="Triangular vortex generator on the model">
+    <figcaption>Triangular vortex generator geometry</figcaption>
+  </figure>
+
+  <figure class="project-image">
+    <img src="light_mcqueen_ideal2.gif" alt="Smoke flow visualization over the model" loading="lazy">
+    <figcaption>Smoke flow visualization</figcaption>
+  </figure>
+
+  <h2>Key Engineering Insights</h2>
+
+  <h3>Flow Behavior</h3>
+  <p>
+    Vortex generators energize the boundary layer, delaying separation and shrinking the wake.
+    Flow visualization showed that well-placed VGs kept the flow attached further along the body.
+  </p>
+
+  <h3>Placement Sensitivity</h3>
+  <ul>
+    <li><strong>Front placement:</strong> increased drag through early turbulence and higher skin friction</li>
+    <li><strong>Mid placement:</strong> minimal or inconsistent effect</li>
+    <li><strong>Rear-mid (~65%):</strong> most effective — delayed separation and reduced the wake</li>
+  </ul>
+
+  <h2>Results</h2>
+
+  <h3>Drag Reduction</h3>
+  <p>
+    The optimized placement reduced drag by roughly <strong>3% relative to the baseline</strong>
+    across the tested Reynolds numbers.
+  </p>
+
+  <figure class="project-image">
+    <img src="light_mcqueen3.jpg" alt="Drag coefficient vs Reynolds number">
+    <figcaption>Coefficient of drag vs Reynolds number for each VG placement</figcaption>
+  </figure>
+
+  <h3>Power Impact</h3>
+  <p>
+    The drag reduction was measurable, but the corresponding power savings were minimal at this
+    scale — a reminder that Reynolds-number mismatch limits how far model results extrapolate to
+    a full-size vehicle.
+  </p>
+
+  <h2>Key Takeaways</h2>
+  <ul>
+    <li>Small geometric changes can significantly affect boundary-layer behavior</li>
+    <li>VG placement matters more than whether VGs are present at all</li>
+    <li>Flow visualization is essential for interpreting aerodynamic results</li>
+    <li>Scale testing has real limits; know what your Reynolds number does and doesn't tell you</li>
+  </ul>
+
+  <p class="report">
+    <a href="light_mcqueen_report.pdf">Download the full technical report (PDF)</a>
+  </p>
+
+</article>
+
+<div class="back"><a href="index.html">&larr; Back to Projects</a></div>
+
 <footer>
-  © 2025 Javier Sosa • Javisosa2005@icloud.com
+  © 2026 Javier Sosa • <a href="mailto:Javisosa2005@icloud.com">Javisosa2005@icloud.com</a>
 </footer>
 
 </body>

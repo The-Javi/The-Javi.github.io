@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Composite Top Shell | Javier Sosa</title>
+  <link rel="icon" type="image/png" href="Logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="page-header">
+  <p class="eyebrow"><a href="index.html">Javier Sosa</a></p>
+  <h1>Composite Top Shell &amp; Field Repairs</h1>
+  <p class="subtitle">Longhorn Racing Solar — Composites Team</p>
+</header>
+
+<article>
+
+  <h2>Overview</h2>
+  <p>
+    The top shell is the largest composite part on the car: the aerodynamic skin that also carries
+    the solar array. Junior year, the composites team rebuilt it from a heavy 6-ply layup into a 2-ply
+    laminate stiffened by strategically placed bulkheads. I ran the ANSYS ACP analysis behind that
+    change, prepared the tooling, laid up the shell, and wrote the documentation so the next team
+    doesn't have to relearn it. At competition, when the bulkheads cracked, I designed the fix that
+    kept us racing.
+  </p>
+
+  <div class="stats">
+    <div class="stat"><b>80 lb</b><span>lighter than the previous shell</span></div>
+    <div class="stat"><b>6 → 2</b><span>plies</span></div>
+    <div class="stat"><b>5 × 16 ft</b><span>EPS mold</span></div>
+    <div class="stat"><b>&lt;24 hr</b><span>competition repair</span></div>
+  </div>
+
+  <figure class="project-image">
+    <div class="placeholder">Photo: finished 2-ply top shell on the car</div>
+    <figcaption>Top shell installed on the car</figcaption>
+  </figure>
+
+  <h2>Laminate Design</h2>
+  <p>
+    The previous shell was a 6-ply carbon layup weighing over 100 lb. Laminate theory says most of
+    that material wasn't doing anything — a thin skin is plenty for aero loads if it's held in shape.
+    Composite FEA in ANSYS ACP let us iterate on ply schedule and bulkhead placement until a 2-ply
+    skin with internal bulkheads met the stiffness targets at 20 lb. It was the team's best shell
+    to date.
+  </p>
+
+  <figure class="project-image">
+    <div class="placeholder">Image: ANSYS ACP result showing bulkhead placement and deflection</div>
+    <figcaption>ANSYS ACP laminate analysis — bulkhead placement study</figcaption>
+  </figure>
+
+  <h2>Tooling</h2>
+  <p>
+    A part this size needs a mold this size. We prepped a 5 × 16 ft EPS foam negative mold by
+    sanding it smooth, skimming it with thin spackle, sanding, priming, sanding, applying gel coat,
+    and sanding again — each pass chasing a tooling-quality surface that the carbon would pick up
+    exactly. Any ridge in the mold becomes a ridge in the part.
+  </p>
+  <p>
+    Earlier, for smaller parts, I'd spent a week turning a salvaged steel sheet into a flat layup
+    table: filling scratches with Bondo, then wet-sanding from 400 to 3000 grit. The thin sheet we'd
+    been using warped under vacuum; the thicker one didn't.
+  </p>
+
+  <figure class="project-image">
+    <div class="placeholder">Photo: EPS mold during surface prep (spackle / primer / gel coat)</div>
+    <figcaption>EPS negative mold surface preparation</figcaption>
+  </figure>
+
+  <h2>Manufacturing</h2>
+  <p>
+    Vacuum-bag wet layup: release agent on the mold, plies cut at offset angles for multidirectional
+    strength, resin and hardener mixed by a calculator we built to hit the right fiber-to-resin ratio
+    by volume, each ply saturated with a squeegee, then peel ply, breather, tacky tape, bag, and
+    vacuum for 24 hours. Respirators and gloves throughout.
+  </p>
+  <p>
+    I initiated the documentation from these layups — step by step, where things went wrong, and
+    what to research or simplify next time. That process document now lives in the team database
+    and is the baseline for the procedures I standardized as lead across 20+ carbon, Kevlar,
+    fiberglass, and sandwich parts.
+  </p>
+
+  <figure class="project-image">
+    <div class="placeholder">Photo: shell layup under vacuum</div>
+    <figcaption>Top shell under vacuum during cure</figcaption>
+  </figure>
+
+  <h2>Competition Repair</h2>
+  <p>
+    During scrutineering, the middle rear of the shell started to sag. Some bulkheads had cracked
+    and were no longer carrying load. We had roughly 24 hours before race day.
+  </p>
+  <p>
+    Laying up replacement bulkheads was impossible in the time — composite cure alone would blow
+    the window. Steel braces would hold but add too much weight. The solution was <em>sheet-metal
+    doublers</em>: thin metal plates bonded across each crack with high-performance structural
+    epoxy, so load bypasses the split through the doubler. I also added pre-emptive doublers at
+    the ribs showing early fatigue, since they'd been compensating for the broken ones. The shell
+    held for the rest of competition.
+  </p>
+
+  <figure class="project-image">
+    <div class="placeholder">Photo: bonded sheet-metal doublers across the cracked bulkhead</div>
+    <figcaption>Field repair — bonded doublers bridging the cracked bulkhead</figcaption>
+  </figure>
+
+  <h2>Driver Egress Step</h2>
+  <p>
+    Regulations require the driver to be able to exit the car quickly, which meant a step the
+    driver could stand on without deforming the shell. The step had to bond to the steel space
+    frame and meet the compound curve of the shell's underside — and the CAD model couldn't be
+    trusted for that curve, because hand layup stacks up too much tolerance.
+  </p>
+  <p>
+    I measured four corner heights and built up the curve numerically. The bulk of the height came
+    from carbon sandwich panels stacked and bonded with EVA film, melted in an oven. The top layer
+    that actually meets the shell is a 3D print in ASA at 3% hexagonal infill — strong in
+    compression, fine in heat, and a fraction of the weight and lead time of machining a 3D curve
+    into composite. It has survived 100+ exits and jumps, including the heaviest drivers, with no
+    repairs.
+  </p>
+
+  <figure class="project-image">
+    <div class="placeholder">Photo: egress step installed, showing sandwich stack and printed interface</div>
+    <figcaption>Driver egress step — bonded sandwich panels with 3D-printed interface</figcaption>
+  </figure>
+
+  <h2>Key Takeaways</h2>
+  <ul>
+    <li>Stiffness comes from geometry, not thickness — the bulkheads did more than four plies of carbon</li>
+    <li>Tooling surface quality is the ceiling on part quality; budget as much time for the mold as for the part</li>
+    <li>Document the layup while it's fresh, including what went wrong</li>
+    <li>Under time pressure, reroute the load instead of rebuilding the structure</li>
+    <li>When the CAD can't be trusted, measure the real part</li>
+  </ul>
+
+</article>
+
+<div class="back"><a href="index.html">&larr; Back to Projects</a></div>
+
+<footer>
+  © 2026 Javier Sosa • <a href="mailto:Javisosa2005@icloud.com">Javisosa2005@icloud.com</a>
+</footer>
+
+</body>
+</html>

@@ -3,141 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pushrod | Javier Sosa</title>
+  <title>Carbon Fiber Pushrod | Javier Sosa</title>
+  <link rel="icon" type="image/png" href="Logo.png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="Webpics/Logo.png" />
 </head>
 <body>
 
-<!-- Header -->
-<header class="header-banner small">
-  <h1>Carbon Fiber Pushrod</h1>
-  <h2><em>Research and Development - Composites Team</em></h2>
-  <p class="subtitle">by Javier Sosa</p>
+<header class="page-header">
+  <p class="eyebrow"><a href="index.html">Javier Sosa</a></p>
+  <h1>Carbon Fiber Pushrod Development</h1>
+  <p class="subtitle">Longhorn Racing Solar — Composites Team · Research &amp; Development</p>
 </header>
 
-<!-- Main Content -->
-<main class="content-wrapper project-page">
-  <article>
+<article>
 
-    <h2>Overview</h2>
-    <p>
-      Designed and tested a carbon fiber replacement for aluminum suspension pushrods to reduce weight while maintaining structural performance.
-      Responsible for insert design, bonding strategy, and experimental validation.
-    </p>
+  <h2>Overview</h2>
+  <p>
+    Our next-generation car replaces its aluminum suspension pushrods with carbon fiber to cut weight
+    without giving up structural performance. I owned the research, insert design, bonding strategy,
+    and experimental validation — and, when the results came back short, the decision to change
+    how we were testing.
+  </p>
 
-    <figure class="project-image">
-      <img src="PushRodF1.jpg" alt="Pushrod on F1 Car">
-      <figcaption>Pushrod and Pullrod configuration in racing suspension systems</figcaption>
-    </figure>
-
-    <h2>Tools & Methods</h2>
-    <ul>
-      <li>CAD modeling and engineering drawings</li>
-      <li>FEA using ANSYS Mechanical (ACP)</li>
-      <li>Tensile testing (Instron machine)</li>
-      <li>Compression testing (hydraulic press)</li>
-      <li>Epoxy bonding and composite manufacturing</li>
-    </ul>
-
-    <h2>Engineering Challenges</h2>
-    <ul>
-      <li>Carbon fiber anisotropy (strong in tension, weak in compression/shear)</li>
-      <li>No direct threading → required bonded insert system</li>
-      <li>Reliable adhesion between aluminum and composite</li>
-      <li>Maintaining fiber continuity while enabling assembly</li>
-    </ul>
-
-    <h2>Design & Decisions</h2>
-
-    <h3>Bonded Insert System</h3>
-    <p>
-      Developed an internal aluminum sleeve to transfer load from the composite tube to a bolted joint without damaging fibers.
-    </p>
-
-    <h3>Insert Geometry Optimization</h3>
-    <p>
-      Sized insert length using epoxy lap shear data to maximize bond strength while minimizing added weight.
-    </p>
-
-    <h3>Epoxy Flow Strategy</h3>
-    <p>
-      Integrated internal channels within the insert to ensure full adhesive coverage without drilling into the carbon fiber tube.
-    </p>
-
-    <h3>Failure Strategy</h3>
-    <p>
-      Designed for controlled failure progression:
-      <br><strong>Cohesion → Adhesion → Composite → Insert</strong>
-    </p>
-
-    <h3>Surface Preparation</h3>
-    <p>
-      Investigated abrasion and chemical treatment methods to improve bond strength between aluminum and carbon fiber.
-    </p>
-
-    <figure class="project-image">
-      <img src="InsertAnnotated.png" alt="Annotated Insert Model">
-      <figcaption>Insert Design Considerations</figcaption>
-    </figure>
-
-    <figure class="project-image">
-      <img src="InsertDrawing.png" alt="Engineering Drawing">
-      <figcaption>Engineering Drawing of Insert</figcaption>
-    </figure>
-
-    <figure class="project-image">
-      <img src="AnsysInsert.png" alt="FEA Simulation">
-      <figcaption>ANSYS Simulation – 3kN Load</figcaption>
-    </figure>
-
-    <h2>Testing & Results</h2>
-
-    <h3>Tensile Testing</h3>
-    <p>
-      Initial tests achieved ~5% of predicted strength due to poor adhesion. After improving bonding with silica filler, strength increased to ~30%.
-      Adhesive failure remained the limiting factor.
-    </p>
-
-    <figure class="project-image">
-      <img src="PushrodTensile.png" alt="Tensile Test">
-      <figcaption>Tensile Test Result</figcaption>
-    </figure>
-
-    <h3>Compression Testing</h3>
-    <p>
-      The insert flange failed before the composite tube, indicating insufficient insert strength. Local splitting in the tube suggested hoop stress limitations.
-    </p>
-
-    <figure class="project-image">
-      <img src="PushrodCompress.jpg" alt="Compression Test">
-      <figcaption>Compression Test Results</figcaption>
-    </figure>
-
-    <figure class="project-image">
-      <img src="PushrodShear.jpg" alt="Compression Shear">
-      <figcaption>Shear Failure Observed During Compression</figcaption>
-    </figure>
-
-    <h2>Key Takeaways</h2>
-    <ul>
-      <li>Adhesive bonding is the primary failure mode in composite-metal systems</li>
-      <li>Surface preparation significantly impacts performance</li>
-      <li>Insert geometry strongly influences load transfer and failure behavior</li>
-      <li>Composite members can outperform expectations, but joints govern reliability</li>
-    </ul>
-
-  </article>
-
-  <!-- Back Button -->
-  <div class="back-btn">
-    <a href="index.html">&larr; Back to Projects</a>
+  <div class="stats">
+    <div class="stat"><b>30%</b><span>of predicted joint strength reached</span></div>
+    <div class="stat"><b>3 hr → 1 hr</b><span>sample prep after pivot to coupons</span></div>
+    <div class="stat"><b>3 kN</b><span>FEA design load</span></div>
   </div>
-</main>
 
-<!-- Footer -->
+  <figure class="project-image">
+    <img src="PushRodF1.jpg" alt="Pushrod and pullrod suspension on a race car">
+    <figcaption>Pushrod and pullrod configuration in racing suspension systems</figcaption>
+  </figure>
+
+  <h2>Tools &amp; Methods</h2>
+  <ul>
+    <li>CAD modeling and engineering drawings</li>
+    <li>FEA in ANSYS Mechanical (ACP)</li>
+    <li>Tensile testing to failure on an Instron</li>
+    <li>Compression testing in a hydraulic press</li>
+    <li>Insert machining on a manual lathe; epoxy bonding and composite manufacturing</li>
+    <li>ASTM D5868 lap-shear coupons</li>
+  </ul>
+
+  <h2>Engineering Challenges</h2>
+  <ul>
+    <li>Carbon fiber is strong in tension but weak in compression and shear</li>
+    <li>The tube can't be threaded, so a bonded insert is required</li>
+    <li>The aluminum-to-composite bond has to be reliable, including after heat soak in a parked car</li>
+    <li>Fiber continuity has to be preserved while still allowing assembly</li>
+  </ul>
+
+  <h2>Design &amp; Decisions</h2>
+
+  <h3>Material Selection</h3>
+  <p>
+    Purchased carbon tube from Rock West Composites and bonded an in-house machined aluminum insert
+    with Loctite EA E-120HP. Most candidate epoxies lost strength around 50&nbsp;°C; E-120HP was chosen
+    for its high lap-shear strength and retention at the temperatures a car sitting in the Texas sun
+    actually sees.
+  </p>
+
+  <h3>Bonded Insert System</h3>
+  <p>
+    An internal aluminum sleeve transfers load from the composite tube to a bolted joint without
+    cutting fibers.
+  </p>
+
+  <h3>Insert Geometry</h3>
+  <p>
+    Insert length was sized from epoxy lap-shear data to maximize bond strength while minimizing
+    added weight. Internal channels in the insert ensure full adhesive coverage without drilling
+    into the tube.
+  </p>
+
+  <h3>Failure Strategy</h3>
+  <p>
+    Designed for a controlled failure progression:
+    <br><strong>Cohesion → Adhesion → Composite → Insert</strong>
+  </p>
+
+  <h3>Surface Preparation</h3>
+  <p>
+    Investigated abrasion and chemical treatments to improve bonding between aluminum and carbon fiber.
+  </p>
+
+  <figure class="project-image">
+    <img src="InsertAnnotated.png" alt="Annotated insert model">
+    <figcaption>Insert design considerations</figcaption>
+  </figure>
+
+  <figure class="project-image">
+    <img src="InsertDrawing.png" alt="Engineering drawing of the insert">
+    <figcaption>Engineering drawing of the insert</figcaption>
+  </figure>
+
+  <figure class="project-image">
+    <img src="AnsysInsert.png" alt="FEA simulation of the insert">
+    <figcaption>ANSYS simulation at a 3 kN load</figcaption>
+  </figure>
+
+  <h2>Testing &amp; Results</h2>
+
+  <h3>Tensile Testing</h3>
+  <p>
+    Initial tests reached about 5% of predicted strength because of poor adhesion. Adding silica
+    filler raised this to about 30%. Adhesive failure remained the limiting factor — the composite
+    tube and the insert were both fine; the bond between them was not.
+  </p>
+
+  <figure class="project-image">
+    <img src="PushrodTensile.png" alt="Tensile test result">
+    <figcaption>Tensile test result</figcaption>
+  </figure>
+
+  <h3>Compression Testing</h3>
+  <p>
+    The insert flange failed before the composite tube, indicating the insert was under-strength.
+    Local splitting in the tube pointed to hoop-stress limits, and shear failure was also observed.
+  </p>
+
+  <figure class="project-image">
+    <img src="PushrodCompress.jpg" alt="Compression test result">
+    <figcaption>Compression test results</figcaption>
+  </figure>
+
+  <figure class="project-image">
+    <img src="PushrodShear.jpg" alt="Shear failure during compression">
+    <figcaption>Shear failure observed during compression</figcaption>
+  </figure>
+
+  <h3>Changing the Test Program</h3>
+  <p>
+    Every pushrod test article required six inserts turned on a manual lathe — about three hours
+    of machining to learn one thing about the adhesive. Since the bond, not the geometry, was the
+    problem, I pivoted the program to ASTM D5868 lap-shear coupons: flat carbon samples bonded to
+    aluminum. Six coupons take about an hour to make, cut, and bond, so surface-prep and adhesive
+    variables can be iterated three times faster and at a fraction of the cost. Only once the
+    coupon-level bond is solved does it make sense to return to full inserts.
+  </p>
+
+  <h2>Key Takeaways</h2>
+  <ul>
+    <li>Adhesive bonding is the primary failure mode in composite-metal joints</li>
+    <li>Surface preparation has a major effect on performance</li>
+    <li>Insert geometry strongly influences load transfer and failure behavior</li>
+    <li>The composite members outperformed expectations; the joints govern reliability</li>
+    <li>When the expensive test keeps telling you the same thing, find a cheaper test that asks a sharper question</li>
+  </ul>
+
+</article>
+
+<div class="back"><a href="index.html">&larr; Back to Projects</a></div>
+
 <footer>
-  © 2025 Javier Sosa • Javisosa2005@icloud.com • Built with 💛 and Legos
+  © 2026 Javier Sosa • <a href="mailto:Javisosa2005@icloud.com">Javisosa2005@icloud.com</a>
 </footer>
 
 </body>

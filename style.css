@@ -1,417 +1,249 @@
+/* ==========================================================================
+   Javier Sosa — portfolio stylesheet
 
-/* ===== HERO ===== */
-.hero {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #0a0a0a;
-  color: white;
-  text-align: center;
-  padding: 20px;
+   One file, no dead rules. Every selector below is used by at least one page.
+
+   Sections:
+     1. Tokens & base
+     2. Site header (index) and page header (project pages)
+     3. Index: about, experience, project list
+     4. Project pages: article, figures, placeholders, stats
+     5. Footer & responsive
+   ========================================================================== */
+
+
+/* 1. TOKENS & BASE ------------------------------------------------------- */
+
+:root {
+  --bg:     #fdfdfd;
+  --text:   #333;
+  --muted:  #666;
+  --faint:  #8a8a8a;
+  --line:   #e5e5e5;
+  --link:   #2b6cb0;
+  --width:  900px;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 600;
-  letter-spacing: -1px;
-}
+* { box-sizing: border-box; }
 
-.hero .subtitle {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  color: #aaa;
-  max-width: 600px;
-}
-
-/* ===== LAYOUT ===== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-
-/* ===== GRID ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-/* ===== CARD ===== */
-.card {
-  text-decoration: none;
-  color: inherit;
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-/* Image */
-.card img {
-  width: 100%;
-  height: auto; /* keeps natural aspect ratio */
-  display: block;
-}
-
-/* Content */
-.card-content {
-  padding: 20px;
-}
-
-.card-content h2 {
-  font-size: 1.3rem;
-  margin-bottom: 8px;
-}
-
-.card-content p {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* ===== PROJECT CARDS (INDEX PAGE) ===== */
-.projects {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.project-card {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 30px;
-  background: #fff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
-
-/* Image (KEEP aspect ratio, no cropping) */
-.project-card img.hero {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* Text */
-.project-info {
-  flex: 1;
-}
-
-.project-info h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #111;
-}
-
-.project-info p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .project-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .project-card img.hero {
-    max-width: 100%;
-  }
-}
-
-/* ===== BASE ===== */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fdfdfd;
-  color: #333;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-h1, h2 {
-  margin: 0;
-}
+h1, h2, h3 { margin: 0; line-height: 1.25; }
 
-/* ===== HEADER ===== */
-.header-banner {
-  width: 100%;
-  height: 250px;
-  background-color: #1b0036;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+
+/* 2. HEADERS --------------------------------------------------------------- */
+
+.site-header,
+.page-header {
+  padding: 64px 20px 32px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-bottom: 1px solid var(--line);
 }
 
-.header-banner.small {
-  height: 180px;
+.site-header h1 { font-size: 2.6rem; font-weight: 600; }
+.page-header h1 { font-size: 2rem;   font-weight: 600; }
+
+.site-header .subtitle,
+.page-header .subtitle {
+  margin: 10px auto 0;
+  max-width: 640px;
+  color: #555;
 }
 
-.header-banner h1 {
-  font-size: 2.8rem;
+/* small "Javier Sosa" line above a project title */
+.page-header .eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
+.page-header .eyebrow a { color: var(--faint); }
 
-.subtitle {
-  font-size: 1.2rem;
-  margin-top: 0.5em;
-  color: #ddd;
-}
+.site-header nav { margin-top: 18px; font-size: 0.95rem; }
+.site-header nav a { margin: 0 10px; color: var(--muted); }
 
-/* ===== LAYOUT ===== */
-.content-wrapper {
+
+/* 3. INDEX ----------------------------------------------------------------- */
+
+.container {
+  max-width: var(--width);
+  margin: 0 auto;
   padding: 40px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
-/* ===== PROJECT PAGE ===== */
-.project-page article {
-  max-width: 900px;
+section + section { margin-top: 56px; }
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.about p { margin: 0 0 1em; font-size: 1.05rem; }
+
+/* Experience entries */
+.entry { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.entry:last-child { border-bottom: none; }
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.entry h3    { font-size: 1.15rem; }
+.entry .role { color: var(--muted); }
+.entry .dates { color: var(--faint); font-size: 0.9rem; white-space: nowrap; }
+
+.entry ul { margin: 10px 0 0 18px; padding: 0; }
+.entry li { margin: 4px 0; }
+
+/* Project rows */
+.project-list { display: flex; flex-direction: column; gap: 36px; }
+
+.project-row {
+  display: flex;
+  gap: 24px;
+  color: inherit;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 24px;
+  transition: transform 0.2s ease;
+}
+.project-row:hover { transform: translateX(5px); text-decoration: none; }
+
+.project-row img,
+.project-row .thumb {
+  width: 180px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  align-self: flex-start;
+}
+
+.project-text h2 { font-size: 1.35rem; margin-bottom: 6px; }
+.project-text p  { margin: 4px 0; color: #444; }
+.project-text .result { color: #000; font-weight: 500; }
+.project-text .tools  { margin-top: 6px; font-size: 0.85rem; color: var(--faint); }
+
+
+/* 4. PROJECT PAGES --------------------------------------------------------- */
+
+article {
+  max-width: var(--width);
   margin: 0 auto;
+  padding: 40px 20px;
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
-/* Headings */
-.project-page h2 {
+article h2 {
   margin-top: 2em;
-  font-size: 1.6rem;
+  padding-bottom: 0.3em;
+  font-size: 1.5rem;
   color: #111;
   border-bottom: 2px solid #eee;
-  padding-bottom: 0.3em;
 }
+article h3 { margin-top: 1.4em; font-size: 1.2rem; }
+article p  { margin: 1em 0; }
+article ul { margin: 1em 0 1em 1.5em; padding: 0; }
+article li { margin: 0.4em 0; }
+article strong { font-weight: 600; }
 
-.project-page h3 {
-  font-size: 1.3rem;
-  margin-top: 1.5em;
-}
-
-/* Text */
-.project-page p {
-  margin: 1.2em 0;
-  text-align: justify;
-}
-
-.project-page strong {
-  font-weight: 600;
-}
-
-.project-page ul {
-  margin: 1em 0 1em 2em;
-}
-
-.project-page li {
-  margin: 0.5em 0;
-}
-
-/* ===== IMAGES (FIXED) ===== */
-.project-image {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.project-image img {
-  max-width: 700px;
-  width: 100%;
-  height: auto;
-}
-
-/* Caption */
+/* Figures */
+.project-image { margin: 30px 0; text-align: center; }
+.project-image img { max-width: 700px; margin: 0 auto; }
 .project-image figcaption {
-  font-size: 0.9rem;
-  color: #666;
   margin-top: 8px;
-  font-style: italic;
-}
-
-/* ===== LINKS ===== */
-.project-page a {
-  color: #2b6cb0;
-  text-decoration: none;
-}
-
-.project-page a:hover {
-  text-decoration: underline;
-}
-
-/* ===== BACK BUTTON ===== */
-.back-btn {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.back-btn a {
-  text-decoration: none;
-  color: #fff;
-  background-color: #1b0036;
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.back-btn a:hover {
-  background-color: #3d1a72;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 20px;
   font-size: 0.9rem;
-  color: #777;
-  border-top: 1px solid #ddd;
-  background-color: #f4f4f4;
+  font-style: italic;
+  color: var(--muted);
 }
 
-/* ===== IMAGE OVERLAY ===== */
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  display: none;
-  justify-content: center;
+/* Image placeholders — dashed box where a photo will go */
+.placeholder {
+  display: flex;
   align-items: center;
-  z-index: 1000;
-}
-
-#overlay.active {
-  display: flex;
-}
-
-#overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  height: auto;
-}
-
-#overlayClose {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-}
-
-
-/* ===== HEADER ===== */
-.hero-nasa {
-  padding: 80px 20px 40px;
+  justify-content: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background: #f7f7f7;
+  color: #888;
+  font-size: 0.9rem;
   text-align: center;
-  border-bottom: 1px solid #ddd;
 }
+.project-image .placeholder { max-width: 700px; margin: 0 auto; aspect-ratio: 16 / 9; }
+.thumb.placeholder { aspect-ratio: 4 / 3; padding: 10px; font-size: 0.8rem; }
 
-.hero-nasa h1 {
-  font-size: 2.8rem;
-  font-weight: 600;
-}
-
-.hero-nasa .subtitle {
-  margin-top: 10px;
-  color: #555;
-  font-size: 1rem;
-}
-
-/* ===== LAYOUT ===== */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-/* ===== PROJECT ROWS ===== */
-.project-list {
+/* Key-number callouts */
+.stats {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 24px 0;
+}
+.stat {
+  flex: 1 1 140px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-align: center;
+}
+.stat b    { display: block; font-size: 1.5rem; color: #111; }
+.stat span { font-size: 0.85rem; color: var(--muted); }
+
+/* Compact data table */
+.data-table {
+  width: 100%;
+  margin: 1em 0;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.data-table th,
+.data-table td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+.data-table th { color: var(--muted); font-weight: 600; }
+
+/* Report link + back button */
+.report { margin-top: 2.5em; text-align: center; }
+
+.back { margin: 50px 0 10px; text-align: center; }
+.back a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+}
+.back a:hover { background: #f0f0f0; text-decoration: none; }
+
+
+/* 5. FOOTER & RESPONSIVE --------------------------------------------------- */
+
+footer {
+  padding: 24px 20px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--faint);
 }
 
-.project-row {
-  display: flex;
-  gap: 25px;
-  text-decoration: none;
-  color: inherit;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 25px;
-  transition: transform 0.2s ease;
-}
-
-.project-row:hover {
-  transform: translateX(5px);
-}
-
-/* Image */
-.project-row img {
-  width: 180px;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* Text */
-.project-text h2 {
-  font-size: 1.4rem;
-  margin-bottom: 6px;
-}
-
-.project-text p {
-  margin: 4px 0;
-  color: #444;
-}
-
-/* Result highlight */
-.project-text .result {
-  font-weight: 500;
-  color: #000;
-}
-
-/* Tools */
-.project-text .tools {
-  font-size: 0.85rem;
-  color: #777;
-  margin-top: 6px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .project-row {
-    flex-direction: column;
-  }
-
-  .project-row img {
-    width: 100%;
-  }
+@media (max-width: 640px) {
+  .site-header h1 { font-size: 2rem; }
+  .project-row { flex-direction: column; }
+  .project-row img,
+  .project-row .thumb { width: 100%; }
+  .entry .dates { white-space: normal; }
 }
