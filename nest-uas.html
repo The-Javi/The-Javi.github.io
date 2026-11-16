@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N.E.S.T. VTOL UAS | Javier Sosa</title>
+  <link rel="icon" type="image/png" href="Logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="page-header">
+  <p class="eyebrow"><a href="index.html">Javier Sosa</a></p>
+  <h1>N.E.S.T. — VTOL Long-Endurance Surveillance UAS</h1>
+  <p class="subtitle">Senior Design · IPT Lead, Mass Properties · 2026–27</p>
+</header>
+
+<article>
+
+  <h2>Overview</h2>
+  <p>
+    N.E.S.T. (Next-gen Endurance Surveillance Technology) is my senior design team's answer to a
+    customer brief for a wildfire-spotting aircraft: vertical takeoff and landing, a 3 lb sensor
+    payload, three hours on station, 30 lb maximum takeoff weight, and a $10,000 budget. The
+    program runs like an industry one — a requirements database traced to the customer's
+    documents, and a sequence of formal design reviews before anything gets built.
+  </p>
+  <p>
+    I'm the Integrated Product Team lead for mass properties, and I lead the composite design of
+    the wing.
+  </p>
+
+  <div class="stats">
+    <div class="stat"><b>30 lb</b><span>max takeoff weight</span></div>
+    <div class="stat"><b>7.95 ft</b><span>wingspan</span></div>
+    <div class="stat"><b>0.1%</b><span>CG shift, baseline → POD</span></div>
+    <div class="stat"><b>11%</b><span>design margin held</span></div>
+  </div>
+
+  <figure class="project-image">
+    <div class="placeholder">Render: OpenVSP model of the tailsitter — top, side, isometric</div>
+    <figcaption>Point-of-departure configuration</figcaption>
+  </figure>
+
+  <h2>The Aircraft</h2>
+  <p>
+    After screening four VTOL concepts — a conventional quadplane, a tandem-wing tiltrotor, a
+    lifting flying wing, and a tailsitter — the team selected the <strong>tailsitter flying wing</strong>
+    on a weighted trade of empty weight, manufacturing complexity, search-segment L/D, power
+    loading, and actuation complexity. It takes off and lands on its tail, transitions to wing-borne
+    flight, and has the fewest control surfaces and actuators of the candidates.
+  </p>
+  <ul>
+    <li>NACA 4415 wing, 7.95 ft span, 10° leading-edge sweep, 0.6 taper ratio</li>
+    <li>Series-hybrid propulsion: a gasoline generator charges the battery that drives two electric motors, giving endurance a battery alone can't</li>
+    <li>Estimated L/D around 18 maximum and 13 in the search segment</li>
+    <li>3–6 hour search mission at 300 ft AGL with a downward-looking sensor</li>
+  </ul>
+
+  <h2>Mass Properties</h2>
+  <p>
+    Mass properties is a top-down job. The customer's 30 lb limit gets allocated to every subsystem
+    — airframe, propulsion, batteries and fuel, avionics, payload — and each subsystem lead designs
+    to their budget. I track the rollup and the center of gravity as the design matures, because
+    on a tailsitter flying wing with no horizontal tail, CG position <em>is</em> the static margin.
+  </p>
+  <p>
+    Between the sized baseline (AV BL) and the point-of-departure configuration (AV POD), the
+    vehicle grew as real components replaced estimates:
+  </p>
+
+  <table class="data-table">
+    <tr><th></th><th>AV BL</th><th>AV POD</th><th>Change</th></tr>
+    <tr><td>Takeoff gross weight</td><td>25.59 lb</td><td>29.74 lb</td><td>+16%</td></tr>
+    <tr><td>Useful load</td><td>13.78 lb</td><td>15.93 lb</td><td>+13%</td></tr>
+    <tr><td>Empty weight</td><td>11.82 lb</td><td>13.81 lb</td><td>+17%</td></tr>
+    <tr><td>Center of gravity (FS)</td><td>13.20 in</td><td>13.11 in</td><td>−0.1%</td></tr>
+  </table>
+
+  <p>
+    Sixteen percent weight growth with the CG held to a tenth of a percent is the number I'm
+    proudest of on this project. The bottoms-up weight sits at 27.64 lb with margin — an 11%
+    design margin fraction against the 30 lb limit, with CG at 44–46% of mean aerodynamic chord
+    at both design gross weight and bottoms-up weight.
+  </p>
+  <p>
+    The tool behind it is a spreadsheet sizing calculator that links the mass budget to wing
+    loading, so a change in one subsystem's mass immediately shows up as a change in required
+    wing area, stall speed, and the weight of the wing itself. It let us iterate the whole
+    aircraft in minutes rather than re-running the sizing by hand.
+  </p>
+
+  <figure class="project-image">
+    <div class="placeholder">Image: mass properties rollup — subsystem masses and CG stations</div>
+    <figcaption>Mass properties rollup and CG tracking</figcaption>
+  </figure>
+
+  <h2>Composite Wing</h2>
+  <p>
+    An 8 ft wing is a big part to hand-lay accurately. I'm leading the composite design and tooling
+    to minimize both weight and tolerance stackup, bringing laminate theory, FEA, and three years
+    of Longhorn Racing layups to the question of how to build a wing that comes out of the mold the
+    same shape the aero team analyzed.
+  </p>
+
+  <figure class="project-image">
+    <div class="placeholder">Image: wing layup / tooling concept</div>
+    <figcaption>Wing laminate and tooling concept</figcaption>
+  </figure>
+
+  <h2>Requirements &amp; Reviews</h2>
+  <p>
+    Early in the program I built a source-cited compliance matrix mapping 46 requirements back to
+    the customer's Statement of Work, Capability Development Document, and design and mission
+    specifications, with KPP/KSA scoring. That traceability surfaced eight places where the
+    customer's own documents conflicted — including a threshold-versus-objective mismatch on VTOL
+    thrust margin — which we raised with the customer rather than guessing.
+  </p>
+  <p>
+    Reviews completed so far: System Requirements Review, Test Readiness Review, Test Results
+    Review, and Conceptual Design Review. Preliminary Design Review is next; Critical Design Review
+    comes before manufacturing in the spring.
+  </p>
+
+  <h2>Status</h2>
+  <p>
+    Point-of-departure configuration defined; detailed design in progress toward PDR. This page
+    will be updated as the aircraft is built and flown.
+  </p>
+
+</article>
+
+<div class="back"><a href="index.html">&larr; Back to Projects</a></div>
+
+<footer>
+  © 2026 Javier Sosa • <a href="mailto:Javisosa2005@icloud.com">Javisosa2005@icloud.com</a>
+</footer>
+
+</body>
+</html>

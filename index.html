@@ -3,83 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Javier Sosa — aerospace engineering senior at UT Austin. Composites, structural design, and test & instrumentation." />
   <title>Javier Sosa | Aerospace Portfolio</title>
+  <link rel="icon" type="image/png" href="Logo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="hero-nasa">
+<header class="site-header">
   <h1>Javier Sosa</h1>
   <p class="subtitle">
-    Aerospace Engineering Student — UT Austin<br>
-    Structural Design • Aerodynamics • Experimental Testing
+    Aerospace Engineering Senior — UT Austin<br>
+    Composites • Structural Design • Test &amp; Instrumentation
   </p>
+  <nav>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="Javier_Sosa_Resume.pdf">Resume</a>
+    <a href="https://www.linkedin.com/in/javier-sosa-b61421278/">LinkedIn</a>
+    <a href="mailto:Javisosa2005@icloud.com">Email</a>
+  </nav>
 </header>
 
-<!-- PROJECTS -->
 <main class="container">
 
-  <section class="project-list">
+  <!-- ABOUT -->
+  <section class="about">
+    <p>
+      I build and test carbon-fiber structures. Over three years on Longhorn Racing Solar I went from
+      CAD on battery enclosures to leading the composites team — designing parts, laying them up,
+      and breaking them to find out where they actually fail. On my senior design team I own mass
+      properties for a hybrid-electric VTOL surveillance aircraft.
+    </p>
+    <p>
+      I graduate in May 2027 and am looking for full-time roles in composites R&amp;D, structural
+      design, or test and instrumentation.
+    </p>
+  </section>
 
-    <!-- PUSHROD -->
-    <a href="pushrod-insert.html" class="project-row">
-      <img src="PushRodInsert.png" alt="Pushrod">
-      <div class="project-text">
-        <h2>Carbon Fiber Pushrod Development</h2>
-        <p>
-          Designed and tested bonded composite–metal interface for suspension system
-        </p>
-        <p class="result">
-          → Identified adhesion as primary failure mode through tensile & compression testing
-        </p>
-        <p class="tools">
-          ANSYS • Instron • Composite Manufacturing
-        </p>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div>
+          <h3>Longhorn Racing Solar — FSAE</h3>
+          <div class="role">Composite System Lead · previously Composites Engineer, Solar Array Lead, Enclosures</div>
+        </div>
+        <div class="dates">Aug 2023 – Present</div>
       </div>
-    </a>
+      <ul>
+        <li>Lead an 11-member composites team and a &gt;$7,000 materials budget; author layup and machining SOPs with university EHS and run SRR/PDR design reviews.</li>
+        <li>Reduced the vehicle top shell from a 6-ply, &gt;100 lb design to a 2-ply, 20 lb structure with strategically placed bulkheads, validated in ANSYS ACP.</li>
+        <li>Delivered the car's 297-cell solar array with two months to competition, cutting lamination cycle time 65% and raising throughput from 7 modules/week to 4/day.</li>
+        <li>Stood up a faculty-validated coupon test program (ASTM D1002/D5868) with custom Instron fixtures to qualify bonded joints, sandwich panels, and laminates before they go on the car.</li>
+      </ul>
+    </div>
 
-    <!-- WIND TUNNEL -->
-    <a href="wind-tunnel.html" class="project-row">
-      <img src="light_mcqueen_ideal2.gif" alt="Wind Tunnel">
-      <div class="project-text">
-        <h2>Vortex Generator Aerodynamics Study</h2>
-        <p>
-          Investigated placement of vortex generators to delay boundary layer separation
-        </p>
-        <p class="result">
-          → Evaluated drag reduction across multiple configurations in wind tunnel testing
-        </p>
-        <p class="tools">
-          Wind Tunnel • Pressure Measurement • Flow Analysis
-        </p>
+    <div class="entry">
+      <div class="entry-head">
+        <div>
+          <h3>Senior Design — N.E.S.T. Long-Endurance Surveillance UAS</h3>
+          <div class="role">IPT Lead, Mass Properties · Composite Wing Design</div>
+        </div>
+        <div class="dates">Aug 2026 – Present</div>
       </div>
-    </a>
+      <ul>
+        <li>Own mass allocation and CG tracking for a 30 lbm MTOW series-hybrid tailsitter; held CG within 0.1% and an 11% design margin through 16% gross-weight growth from baseline to point-of-departure.</li>
+        <li>Lead composite design and tooling for the 7.95 ft NACA 4415 wing; built the compliance matrix that surfaced eight specification conflicts for the customer.</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- IMPULSE -->
-    <a href="impulse_test.html" class="project-row">
-      <img src="emech.png" alt="Impulse Test">
-      <div class="project-text">
-        <h2>Impulse Response Testing</h2>
-        <p>
-          Measured force response of materials using strain gauges and data acquisition
-        </p>
-        <p class="result">
-          → Characterized dynamic loading behavior across test samples
-        </p>
-        <p class="tools">
-          LabVIEW • Strain Gauges • Signal Processing
-        </p>
-      </div>
-    </a>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
 
+    <div class="project-list">
 
+      <a href="top-shell.html" class="project-row">
+        <div class="thumb placeholder">Photo: 2-ply top shell on the car</div>
+        <div class="project-text">
+          <h2>Composite Top Shell &amp; Field Repairs</h2>
+          <p>Cut the solar car's top shell from over 100 lb to 20 lb with a 2-ply laminate and strategically placed bulkheads</p>
+          <p class="result">→ 80 lb lighter and the team's best shell yet; repaired failed bulkheads in under 24 hours at competition to stay in the race</p>
+          <p class="tools">ANSYS ACP • Vacuum-Bag Wet Layup • EPS Tooling • Bonded Repair</p>
+        </div>
+      </a>
+
+      <a href="pushrod-insert.html" class="project-row">
+        <img src="PushRodInsert.png" alt="Carbon fiber pushrod insert">
+        <div class="project-text">
+          <h2>Carbon Fiber Pushrod Development</h2>
+          <p>Designed and tested a bonded composite-to-aluminum insert to replace aluminum suspension pushrods</p>
+          <p class="result">→ Isolated the adhesive interface as the limiting factor; pivoted to ASTM D5868 coupons and cut sample prep from 3 hours to 1</p>
+          <p class="tools">ANSYS • Instron • Lap-Shear Testing • Manual Lathe</p>
+        </div>
+      </a>
+
+      <a href="solar-array.html" class="project-row">
+        <div class="thumb placeholder">Photo: laminated solar module, mirror finish</div>
+        <div class="project-text">
+          <h2>Solar Array Manufacturing</h2>
+          <p>Took over a 297-cell array at 48 cells complete with two months to competition and delivered all 58 modules</p>
+          <p class="result">→ Cut lamination cycle time 65% and raised throughput from 7 modules a week to 4 a day</p>
+          <p class="tools">Vacuum Lamination • Process Development • I-V Validation • 3D-Printed Tooling</p>
+        </div>
+      </a>
+
+      <a href="nest-uas.html" class="project-row">
+        <div class="thumb placeholder">Render: N.E.S.T. tailsitter</div>
+        <div class="project-text">
+          <h2>N.E.S.T. VTOL Surveillance UAS</h2>
+          <p>Mass properties lead for a 30 lb hybrid-electric tailsitter flying wing built to loiter for three hours</p>
+          <p class="result">→ Held CG within 0.1% through 16% gross-weight growth from baseline to point-of-departure</p>
+          <p class="tools">Mass Budgeting • Composite Wing Design • Requirements Management</p>
+        </div>
+      </a>
+
+      <a href="impulse_test.html" class="project-row">
+        <img src="emech.png" alt="Force plate impulse test">
+        <div class="project-text">
+          <h2>Force Plate &amp; Impulse Testing</h2>
+          <p>Built a $40 strain-gauge force plate to measure how footwear attenuates impact</p>
+          <p class="result">→ Cushioned shoes transmitted 25% less impulse; traced plate yielding to an unverified alloy</p>
+          <p class="tools">Strain Gauges • Wheatstone Bridge • NI DAQ • MATLAB</p>
+        </div>
+      </a>
+
+      <a href="wind-tunnel.html" class="project-row">
+        <img src="light_mcqueen2.jpg" alt="Vortex generator on scale model">
+        <div class="project-text">
+          <h2>Vortex Generator Aerodynamics Study</h2>
+          <p>Tested five vortex generator placements on a 1:12 bluff-body model to delay boundary-layer separation</p>
+          <p class="result">→ Placement at 65% body length cut drag ~3%; forward placement made it worse</p>
+          <p class="tools">Wind Tunnel • Flow Visualization • Drag Measurement</p>
+        </div>
+      </a>
+
+      <a href="enclosure-latch.html" class="project-row">
+        <div class="thumb placeholder">Photo: battery enclosure latch</div>
+        <div class="project-text">
+          <h2>Battery Enclosure Latch</h2>
+          <p>Designed the locking mechanism for the solar car's battery enclosure within a 1-inch clearance envelope</p>
+          <p class="result">→ Cable-actuated latch validated in FEA and a printed prototype; raced at competition</p>
+          <p class="tools">SolidWorks • Top-Down Modeling • FEA • 3D Printing</p>
+        </div>
+      </a>
+
+    </div>
   </section>
 
 </main>
 
 <footer>
-  © 2026 Javier Sosa • Javisosa2005@icloud.com
+  © 2026 Javier Sosa • <a href="mailto:Javisosa2005@icloud.com">Javisosa2005@icloud.com</a>
 </footer>
 
 </body>

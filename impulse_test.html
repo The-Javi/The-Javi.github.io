@@ -3,133 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impulse Testing | Javier Sosa</title>
+  <title>Force Plate &amp; Impulse Testing | Javier Sosa</title>
+  <link rel="icon" type="image/png" href="Logo.png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="Webpics/Logo.png" />
 </head>
 <body>
 
-<!-- Header -->
-<header class="header-banner small">
-  <h1>Impact & Impulse Testing of Footwear</h1>
-  <p class="subtitle">Electromechanical Systems — Javier Sosa</p>
+<header class="page-header">
+  <p class="eyebrow"><a href="index.html">Javier Sosa</a></p>
+  <h1>Force Plate &amp; Impulse Testing of Footwear</h1>
+  <p class="subtitle">Electromechanical Systems — Final Project</p>
 </header>
-  
-<!-- Main Content -->
-<main class="content-wrapper project-page">
-  
-  <article>
 
-    <h2>Overview</h2>
-    <p>
-      Designed and instrumented a force plate system to evaluate impact attenuation in footwear using controlled drop testing. 
-      Compared three shoe types (Converse, walking shoes, and basketball shoes) by analyzing force–time response and impulse 
-      under varying impact energies.
-    </p>
+<article>
 
-    <h2>Engineering Approach</h2>
-    <ul>
-      <li>Custom force plate using aluminum beam with bonded strain gauges</li>
-      <li>Full Wheatstone bridge configuration for maximum sensitivity</li>
-      <li>Data acquisition via NI-9218 at <strong>10 kHz sampling rate</strong></li>
-      <li>Drop tower testing across three energy levels: <strong>4.9 J, 7.48 J, 9.95 J</strong></li>
-      <li>Signal processing to extract peak force and impulse</li>
-    </ul>
-
-    <h2>System Design</h2>
-    <p>
-      The force plate consisted of a 6" × 12" aluminum plate (0.125" thick) instrumented with four strain gauges 
-      arranged in a full Wheatstone bridge. Gauges were positioned symmetrically about the neutral axis to maximize 
-      sensitivity to bending strain during impact loading.
-    </p>
-
-    <p>
-      The system was calibrated using known masses (0–8.6 kg), producing a linear force–voltage relationship with 
-      <strong>R² ≈ 0.99</strong>, enabling accurate conversion of voltage signals into force measurements.
-    </p>
-
-    <figure class="project-image">
-      <img src="emechsetup.jpg" alt="Test Setup">
-      <figcaption>Drop tower and instrumented force plate setup</figcaption>
-    </figure>
-
-    <h2>Key Engineering Insights</h2>
-
-    <h3>Impact Attenuation</h3>
-    <p>
-      Footwear with increased cushioning significantly reduced peak force and impulse. Across all energy levels, 
-      Converse shoes consistently produced the highest loads, while basketball shoes demonstrated the best 
-      energy dissipation at high impact energies.
-    </p>
-
-    <h3>Quantitative Results</h3>
-    <p>
-      At the highest energy level (9.95 J):
-    </p>
-    <ul>
-      <li><strong>Converse:</strong> 10.98 Ns impulse</li>
-      <li><strong>Walking shoe:</strong> 9.16 Ns impulse</li>
-      <li><strong>Basketball shoe:</strong> 8.25 Ns impulse</li>
-    </ul>
-
-    <p>
-      This represents a <strong>~25% reduction in transmitted impulse</strong> between minimal and high-cushion designs.
-    </p>
-
-    <figure class="project-image">
-      <img src="emechimpulse.png" alt="Impulse Results">
-      <figcaption>Impulse comparison across footwear and energy levels</figcaption>
-    </figure>
-
-    <h3>Transient Response</h3>
-    <p>
-      Time-domain analysis revealed distinct damping behavior:
-    </p>
-    <ul>
-      <li><strong>Converse:</strong> Large oscillations, poor damping</li>
-      <li><strong>Walking shoes:</strong> Moderate damping</li>
-      <li><strong>Basketball shoes:</strong> Rapid energy dissipation</li>
-    </ul>
-
-    <figure class="project-image">
-      <img src="emechtransient.png" alt="Transient Response">
-      <figcaption>Force–time response showing damping characteristics</figcaption>
-    </figure>
-
-    <h3>Failure Observation</h3>
-    <p>
-      At the highest energy test, insufficient energy absorption in the Converse configuration caused 
-      <strong>permanent deformation of the aluminum plate</strong>, demonstrating how poor damping transfers 
-      load to the underlying structure.
-    </p>
-
-    <h2>Key Takeaways</h2>
-    <ul>
-      <li>Force plate instrumentation enables high-resolution transient force measurement</li>
-      <li>Wheatstone bridge configuration significantly improves strain sensitivity</li>
-      <li>Impulse is a critical metric for evaluating injury risk</li>
-      <li>Material and geometric design directly influence energy dissipation</li>
-      <li>Poor damping can shift loads to structural components, causing failure</li>
-    </ul>
-
-  </article>
-
-  <h3>Full Technical Report</h3>
-  <p class="center">
-    <a href="emechReport.pdf" download>
-      Download PDF
-    </a>
+  <h2>Overview</h2>
+  <p>
+    The class final project was open-ended: measure anything in the world with the sensors we'd
+    learned. Motivated by basketball and ACL injuries, my team of three asked how effective shoe
+    cushioning actually is at reducing the load that reaches the body. I designed the force plate
+    that made the measurement possible — for $40, on a one-week lead time.
   </p>
 
-  <!-- Back Button -->
-  <div class="back-btn">
-    <a href="index.html">&larr; Back to Projects</a>
+  <div class="stats">
+    <div class="stat"><b>$40</b><span>custom load cell vs. $500 commercial</span></div>
+    <div class="stat"><b>10 kHz</b><span>sampling, NI-9218</span></div>
+    <div class="stat"><b>25%</b><span>less impulse through cushioned shoes</span></div>
+    <div class="stat"><b>R² ≈ 0.99</b><span>calibration linearity</span></div>
   </div>
-</main>
 
-<!-- Footer -->
+  <h2>Requirements</h2>
+  <p>
+    The plan was to drop a known mass from a known height onto a shoe and measure the force
+    transmitted through it. We had a drop tower from a professor; what we needed was a way to
+    measure force underneath it. Project constraints:
+  </p>
+  <ul>
+    <li>Fit the existing drop tower</li>
+    <li>$50 budget</li>
+    <li>One-week lead time</li>
+  </ul>
+  <p>Which set the load cell requirements:</p>
+  <ul>
+    <li>Millivolt precision (&lt;0.1 mV) — the strains involved are small</li>
+    <li>Survive the yield limit of the impacts (&lt;15 J)</li>
+    <li>Millisecond resolution (&gt;1 kHz) — impacts are fast</li>
+  </ul>
+
+  <h2>Trade Study</h2>
+  <p>
+    Three ways to measure effectiveness: an accelerometer on the drop mass, a commercial load cell,
+    or a custom one. Commercial load cells in the range we needed ran about $500 — ten times the
+    budget. An accelerometer measures the wrong side of the shoe. So we built our own.
+  </p>
+
+  <h2>Load Cell Design</h2>
+  <p>
+    A 6" × 12" × 0.125" aluminum plate from McMaster-Carr ($20, two-day lead) instrumented with four
+    in-lab strain gauges in a full Wheatstone bridge, placed to read bending strain at the midspan.
+    The thickness was the design variable: thin enough to deflect measurably under the lightest drop,
+    thick enough not to yield under the heaviest.
+  </p>
+  <p>
+    Hand calculations and FEA on the plate bounded the expected bending strain between
+    1.1 × 10⁻⁵ and 3.2 × 10⁻⁵, which through the bridge gave a minimum output around 0.1 mV —
+    comfortably above the NI-9218's 0.3 µV precision. The local machine shop cut the plate and
+    the whole load cell came in at $40.
+  </p>
+  <p>
+    Calibration against known masses from 0 to 8.6 kg produced a linear force–voltage relationship
+    (R² ≈ 0.99) with a constant of <strong>156 ± 5 N/mV</strong>.
+  </p>
+
+  <figure class="project-image">
+    <img src="emechsetup.jpg" alt="Drop tower and force plate test setup">
+    <figcaption>Drop tower and instrumented force plate setup</figcaption>
+  </figure>
+
+  <h2>Test Matrix</h2>
+  <p>
+    Three shoes — Converse, walking shoes, and basketball shoes — dropped on from three heights
+    (5.0, 7.5, and 10 J), three times each to average. A MATLAB script I wrote aligned and parsed
+    the runs, overlaid them for comparison, and computed peak force and impulse transmission for
+    each.
+  </p>
+
+  <h2>Results</h2>
+
+  <h3>Impact Attenuation</h3>
+  <p>
+    More cushioning reduced both peak force and impulse. Converse produced the highest loads at
+    every energy level; basketball shoes dissipated energy best at high impact energies.
+  </p>
+  <p>At the highest drop (9.95 J):</p>
+  <ul>
+    <li><strong>Converse:</strong> 10.98 N·s impulse</li>
+    <li><strong>Walking shoe:</strong> 9.16 N·s</li>
+    <li><strong>Basketball shoe:</strong> 8.25 N·s</li>
+  </ul>
+  <p>
+    That's a <strong>25% reduction in transmitted impulse</strong> from the minimal-cushion to the
+    high-cushion design — equivalently, the Converse transmitted 33% more. The gap grew with impact
+    energy: 6%, 19%, and 33% across the three drop heights.
+  </p>
+
+  <figure class="project-image">
+    <img src="emechimpulse.png" alt="Impulse comparison across footwear and energy levels">
+    <figcaption>Impulse comparison across footwear and energy levels</figcaption>
+  </figure>
+
+  <h3>Transient Response</h3>
+  <p>Time-domain traces showed distinct damping behavior:</p>
+  <ul>
+    <li><strong>Converse:</strong> large oscillations, poor damping</li>
+    <li><strong>Walking shoes:</strong> moderate damping</li>
+    <li><strong>Basketball shoes:</strong> rapid energy dissipation</li>
+  </ul>
+
+  <figure class="project-image">
+    <img src="emechtransient.png" alt="Force-time response showing damping">
+    <figcaption>Force–time response showing damping characteristics</figcaption>
+  </figure>
+
+  <h3>The Plate Yielded — and Why</h3>
+  <p>
+    On the highest-energy Converse drop, the aluminum plate permanently deformed. The static
+    analysis predicted a maximum bending stress of 161 MPa under the 1090 N peak load, which is
+    fine for 6061-T6 (yield 241 MPa). But the sheet we bought was unmarked. If it was 3003 — yield
+    114 MPa — it was always going to fail at that energy. Two lessons from one bent plate: verify
+    the alloy you actually have, and don't size a dynamic test with a static analysis.
+  </p>
+
+  <h2>Lessons Learned</h2>
+  <ul>
+    <li>A full Wheatstone bridge was probably overkill — a half bridge would have met the precision requirement with less wiring</li>
+    <li>Dynamic tests need dynamic analysis; static sizing under-predicted the plate's response</li>
+    <li>Calculate the yield stress of the plate up front, and know what alloy it is</li>
+    <li>Aligning and parsing the raw data was more work than expected — plan the processing pipeline before testing</li>
+    <li>Impulse is a useful metric for injury-risk comparisons, and poor damping shifts load into the structure underneath</li>
+  </ul>
+
+  <p class="report">
+    <a href="emechReport.pdf">Download the full technical report (PDF)</a>
+  </p>
+
+</article>
+
+<div class="back"><a href="index.html">&larr; Back to Projects</a></div>
+
 <footer>
-  © 2025 Javier Sosa • Javisosa2005@icloud.com
+  © 2026 Javier Sosa • <a href="mailto:Javisosa2005@icloud.com">Javisosa2005@icloud.com</a>
 </footer>
 
 </body>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar Array Manufacturing | Javier Sosa</title>
+  <link rel="icon" type="image/png" href="Logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="page-header">
+  <p class="eyebrow"><a href="index.html">Javier Sosa</a></p>
+  <h1>Solar Array Manufacturing</h1>
+  <p class="subtitle">Longhorn Racing Solar — Array Lead, Summer 2026</p>
+</header>
+
+<article>
+
+  <h2>Overview</h2>
+  <p>
+    Two months before competition, the car's solar array was 48 cells into a 297-cell build and
+    nobody was available to finish it. I took over the manufacturing schedule and the integration
+    onto the top shell — and first had to fix the process, because at the rate we were laminating
+    we weren't going to make it.
+  </p>
+
+  <div class="stats">
+    <div class="stat"><b>297</b><span>cells across 58 modules</span></div>
+    <div class="stat"><b>4 m²</b><span>array area</span></div>
+    <div class="stat"><b>65%</b><span>cycle time reduction</span></div>
+    <div class="stat"><b>7/wk → 4/day</b><span>module throughput</span></div>
+  </div>
+
+  <figure class="project-image">
+    <div class="placeholder">Photo: completed array integrated on the top shell</div>
+    <figcaption>Array integrated on the car's top shell</figcaption>
+  </figure>
+
+  <h2>Starting Point</h2>
+  <p>
+    Two years earlier the team had a decent lamination process; that knowledge had left with the
+    people who had it. The restarted effort was producing modules in over an hour each, with
+    visible and tangible ridges and air bubbles in the surface. Lumpy encapsulation costs you
+    power and looks bad on a car whose whole top surface is the array.
+  </p>
+
+  <figure class="project-image">
+    <div class="placeholder">Photo: early module showing ridges and bubbles vs. final mirror-finish module</div>
+    <figcaption>Before and after — surface quality from the original process vs. the revised one</figcaption>
+  </figure>
+
+  <h2>Process Development</h2>
+  <p>
+    Through a series of empirical tests, I got lamination down to about 30 minutes per module and
+    the surface to a mirror finish. The changes that mattered:
+  </p>
+  <ul>
+    <li><strong>Flipped the cells sunny-side down</strong> so the finished face forms against the smooth tool surface instead of the vacuum bag.</li>
+    <li><strong>Started the oven at melt temperature</strong> rather than ramping up, soaking, and cooling — the ramp wasn't doing anything useful.</li>
+    <li><strong>Staged the vacuum pressure</strong> with a regulator: lower pressure first to let air bubbles escape, then full pressure to consolidate.</li>
+    <li><strong>Slowed the cooldown</strong> from fans and heat sinks to semi-slow, so cells cool uniformly without dimples and indents.</li>
+    <li><strong>Pre-cut everything</strong> into an assembly line so lamination was the only thing happening at the laminator.</li>
+  </ul>
+  <p>
+    I also reached out to industry contacts to understand how production lamination is normally
+    done and where our process diverged. Output went from 7 modules a week to 4 a day, which is
+    what put the timeline back inside the competition date.
+  </p>
+
+  <figure class="project-image">
+    <div class="placeholder">Photo: lamination setup — oven, vacuum regulator, pre-cut material stacks</div>
+    <figcaption>Lamination station with staged vacuum regulator and pre-cut material</figcaption>
+  </figure>
+
+  <h2>Integration on a Conductive Shell</h2>
+  <p>
+    Every module has exposed leads that connect to its neighbors. For aerodynamics and a clean
+    look, the leads drop through holes in the top shell to connect underneath — but the shell is
+    carbon fiber, and carbon fiber conducts. Each lead had to be insulated where it passed
+    through while staying live.
+  </p>
+  <p>
+    Commercial grommets ran about $3 for five and we needed 100. I designed and 3D-printed our own,
+    sized exactly to the leads, for effectively no material cost. For waterproofing, I developed a
+    potting method from underneath: the printed grommet, a short plastic tube, and RTV silicone
+    form a "top hat" around each lead that seals the hole and strain-relieves the connection so it
+    can't be pulled out.
+  </p>
+
+  <figure class="project-image">
+    <div class="placeholder">Photo or CAD: 3D-printed grommet and RTV-potted lead pass-through</div>
+    <figcaption>Printed insulating grommet and RTV-potted lead "top hat"</figcaption>
+  </figure>
+
+  <h2>Validation</h2>
+  <p>
+    Every module's I-V curve was measured and checked against spec before it went on the shell,
+    so a bad cell or a bad lamination was caught at the bench rather than on the car.
+  </p>
+
+  <h2>Key Takeaways</h2>
+  <ul>
+    <li>Process knowledge walks out the door unless it's written down — the first job was recovering what the team already knew once</li>
+    <li>Small sequencing changes (orientation, pressure staging, cooldown rate) were worth more than any new equipment</li>
+    <li>Throughput, not cycle time, is the number that matters against a deadline</li>
+    <li>When the off-the-shelf part doesn't fit the budget or the geometry, print it</li>
+  </ul>
+
+</article>
+
+<div class="back"><a href="index.html">&larr; Back to Projects</a></div>
+
+<footer>
+  © 2026 Javier Sosa • <a href="mailto:Javisosa2005@icloud.com">Javisosa2005@icloud.com</a>
+</footer>
+
+</body>
+</html>
